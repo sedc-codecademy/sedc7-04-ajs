@@ -1,0 +1,7 @@
+	HomeWork
+
+	Create an empty webpage.
+    Download the RSS feed at https://jsonplaceholder.typicode.com/posts and store it in your project folder.
+    Use AJAX (via the raw JS API or jQuery) to load the file into your page.
+    Create a <h1> with the title of the RSS feed.
+    Create a <ul>. For each <item>, create a <li> which contains the title of the post as <h2>, and <span> the body of the post.

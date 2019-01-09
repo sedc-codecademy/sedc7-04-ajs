@@ -1,0 +1,48 @@
+<html>
+    <head>
+
+        <style>
+            ul
+            {
+                margin:0;
+                padding: 0;
+                list-style: none;
+            }
+
+            li
+            {
+                list-style: none;
+                border: 1px solid black;
+            }
+
+            li > span
+            {
+                display: inline-block;
+                vertical-align: middle;
+                padding: 5px 10px;
+            }
+
+            .complete-true
+            {
+                background: green;
+            }
+
+            .complete-false
+            {
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="existingTodos">
+            <ul></ul>            
+        </div>
+
+        <script
+        src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+
+        <script src="recipes.js" type="text/javascript"></script>
+    </body>
+</html>
