@@ -45,3 +45,54 @@ console.log(jsObject.trainer);
 let newJson = JSON.stringify(jsObject);
 ```
 So when the JSON string is parsed we can treat it like a normal object. We can also convert it back if we need to send it to the service or site back. If you are not sure that your JSON is valid you can use some of the online sites that validate JSON objects such as https://jsonlint.com/
+
+## What is AJAX
+Making a request is always done through an http protocol call. That is the standard call that we do when we request for any site to be opened. With this call we can also request things from sites and services on the Internet. But for every call we need to reload our page. To not reload the page every time we make a call, we use AJAX. AJAX is a technique with which we can send requests and get responses dynamically, without reloading everything. So how do we make a call with AJAX? 
+1. Find a service or site that allows requests for some data
+2. Get the URL address from that site or service where we will make the calls
+3. Write AJAX call and code to handle the response in the JavaScript script
+4. Write code as if you already have the response in a success method
+5. Write code as if you didn't get what you desired in an error method
+
+We can make the AJAX call using plain JavaScript, JQyery or with the new JavaScript feature called fetch.
+##### Plain JavaScript
+```javascript
+let xhr = new XMLHttpRequest();
+xhr.onload = function () {
+  if (xhr.status >= 200 && xhr.status < 300) {
+    console.log('The request succeeded!');
+    let resultParsed = JSON.parse(xhr.response);
+    console.log(resultParsed);
+  } else {
+    console.log('The request failed!');
+    console.log(xhr.responseText);
+  }
+};
+xhr.open('GET', 'https://raw.githubusercontent.com/Drakso/JavaScriptAjax/master/students3.json');
+xhr.send();
+````
+##### JQuery
+```javascript
+$.ajax({
+  url: "https://raw.githubusercontent.com/Drakso/JavaScriptAjax/master/students3.json",
+  success: function (response) {
+    console.log('The request succeeded!');
+    let resultParsed = JSON.parse(response);
+    console.log(resultParsed);
+  }, 
+  error: function(response){
+    console.log('The request failed!');
+    console.log(response.responseText);
+  }
+});
+````
+##### Fetch
+```javascript
+fetch('https://raw.githubusercontent.com/Drakso/JavaScriptAjax/master/students3.json')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(myJson);
+  });
+````
