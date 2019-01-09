@@ -1,7 +1,7 @@
 # HOMEWORK
 
 ## Try to copy an object or an array and break the reference
-    - it should not be the same object
+    it should not be the same object
 
     ```javascript
     let a = { name: 'Igor' }
