@@ -96,3 +96,36 @@ fetch('https://raw.githubusercontent.com/sedc-codecademy/sedc7-04-ajs/master/g2/
     console.log(myJson);
   });
 ````
+
+
+
+## APIs
+API pages are pages that allow you to make requests and get some data from them. You send a request to an API and it returns the data that you need. You can request for the weather on some weather APIs, request for info about books, music, sport matches etc. We request the information that we need with AJAX calls. Some APIs require a special key to be sent in order for them to return some data. A special key is usually acquired if you create an account on the page that is sometimes free and others paid. We can find out if the API requires a key or not through the documentation of the API. There are also APIs that don't require any key or account and payment. Here are some:
+
+#### SPACE INFO API
+**Link:** http://open-notify.org/ \
+**How to use it:** \
+Write the base url: http://api.open-notify.org/ \
+Write iss-now.json after the url to see where the international space station is at right now \
+Write astros.json after the url to see how many astronauts are on the ISS right now \
+**Example:** http://api.open-notify.org/iss-now.json
+#### STAR WARS API
+**Link:** https://swapi.co/ \
+**How to use it:** \
+Write the base url: https://swapi.co/api/
+Write a category: (Planets, Spaceships, Vehicles, People, Films and Species) \
+Write an id ( number ) \
+**Example:** https://swapi.co/api/people/1/
+#### ENVIROMENT API
+**Link:** https://dolugen.github.io/openaq-browser/ \
+**How to use it:** \
+Write the base url: https://api.openaq.org/v1/ \
+Write a category: (Cities, Countries, Measurments, Parameters, Latest) \
+Write optional parameters \
+**Example:** https://api.openaq.org/v1/Latest \
+**With optional:** https://api.openaq.org/v1/measurements?country=MK&city=Centar+Municipality
+
+##### Bonus - Query parameters in URL
+Some APIs require some parameters to be passed in order for them to work. To pass things through the URL we use Query parameters. We write query parameters by first adding a ? after the link that we typed and then write the name of the parameter = the value. All parameters are divided by an &. \
+**Example:** We have an api that requires key and name values. The link is: https://madeupapi.com/api/users \
+Our link should be: https://madeupapi.com/api/users?key=24sfd123rasd3224fsfer3&name=dragan
