@@ -5,7 +5,7 @@
 //     let globalResponse;
 //     callBtn.addEventListener("click", function(){
 //         $.ajax({
-//             url:"https://raw.githubusercontent.com/Drakso/JavaScriptAjax/master/students6.json",
+//             url:"https://raw.githubusercontent.com/sedc-codecademy/sedc7-04-ajs/master/g2/Class1/students.json",
 //             success: function(response){
 //                 console.log("Success!");
 //                 globalResponse = JSON.parse(response);
@@ -30,7 +30,7 @@ $(document).ready(function(){
     let result = document.getElementById("result");
     callBtn.addEventListener("click", function(){
         $.ajax({
-            url:"https://raw.githubusercontent.com/Drakso/JavaScriptAjax/master/students6.json",
+            url:"https://raw.githubusercontent.com/sedc-codecademy/sedc7-04-ajs/master/g2/Class1/students.json",
             success: function(response){
                 console.log("Success!");
                 let responseObject = JSON.parse(response);
@@ -66,7 +66,7 @@ $(document).ready(function(){
 //     let result = document.getElementById("result");
 //     callBtn.addEventListener("click", function(){
 //         $.ajax({
-//             url:"https://raw.githubusercontent.com/Drakso/JavaScriptAjax/master/students6.json",
+//             url:"https://raw.githubusercontent.com/sedc-codecademy/sedc7-04-ajs/master/g2/Class1/students.json",
 //             success: function(response){
 //                 console.log("Success!");
 //                 let responseObject = JSON.parse(response);
