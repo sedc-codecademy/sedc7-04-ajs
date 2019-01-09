@@ -13,6 +13,6 @@ This repository will contain every piece of material about the subject. It will 
 * Homeworks
 ## Course Classes
 Coverage of the classes:
-#### Class 1
+#### [Class 1](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class1/README.md)
 * JSON
 * AJAX 
