@@ -14,5 +14,13 @@ This repository will contain every piece of material about the subject. It will 
 ## Course Classes
 Coverage of the classes:
 #### [Class 1](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class1/README.md)
-* JSON
-* AJAX 
+* Retrospective about the previous subject
+* Introduction to the AJS subject
+* How to get and add things to the internet
+* What is JSON and how to use JSON data
+* What is AJAX
+* How to write AJAX calls
+* What are APIs ( and what are some free APIs to use )
+
+#### [Class 2] (https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class2/README.md)
+* Functions
