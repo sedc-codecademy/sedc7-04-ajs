@@ -54,7 +54,7 @@ let fillQuestionTable = (quizData) => {
     }
 }
 
-// $(() => {
+// $(async () => {
 //     $("#load").on("click", () => {
 //         console.log("quiz loading");
 
