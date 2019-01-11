@@ -67,3 +67,83 @@ function sum(num1,num2){
 // 2 and 3 are arguments
 console.log(sum(2,3));
 ```
+
+## Anonymous functions
+Anonymous functions or more precisely function expressions are functions that are not declared. They are written on the spot where we want them to be executed and when the code runs and gets to the line where they are written, they immediately execute the code that they hold and return a value at the same spot. We use these functions every time we need a function to be executed at some point in time once.
+
+##### Anonymous function in a variable
+```javascript
+let greeting = function(name) {
+    return `Hello ${name}`;
+}
+// The variable becomes the function
+greeting("Bob");
+```
+##### Anonymous function in an event listener
+```javascript
+let button = document.getElementsByTagName("button")[0];
+button.addEventListener("click", function(){
+    console.log("Button is clicked!");
+})
+```
+## Arrow Functions
+Arrow functions are somewhat new addition to the javascript language. They are a shorter version of the anonymous functions we discussed above. We can use them to simplify and shorten our code. Because they were added in the javascript standard in 2015 they may not be supported in very old browsers ( ex: internet explorer ). There are almost no differences in the two except that the one is shorter than the other. Arrow functions don't need **{ }** if they have only one expression or even a return. If you have more than one expression you will need { } and return. Parameters are put in **( )** only if there are more than one. One parameter don't need ( ).
+#### Arrow functions vs Normal anonymous functions
+##### one parameter, one expression
+```javascript
+// Anonymous function
+let sumWith10 = function(num){
+    return num + 10;
+}
+// Arrow function
+let sumFunc = num => num + 10;
+```
+##### multiple parameters, one expression
+```javascript
+// Anonymous function
+let sumFunc = function(num1, num2){
+    return num1 + num2;
+}
+// Arrow function
+let sumFunc = (num1, num2) => num1 + num2;
+```
+##### multiple arguments, multiple expressions
+```javascript
+// Anonymous function
+let sumAndLogFunc = function(num1, num2){
+    let result = num1 + num2;
+    console.log(`The result is: ${result}`)
+    return result;
+}
+// Arrow function
+let sumFunc = (num1, num2) => {
+    let result = num1 + num2;
+    console.log(`The result is: ${result}`)
+    return result;
+};
+```
+##### Arrow function in an event listener
+```javascript
+let button = document.getElementsByTagName("button")[0];
+button.addEventListener("click", ()=>{
+    console.log("Button is clicked!");
+})
+```
+## Spread syntax
+With spread syntax we can pass collection values as separate values in places. For instance if we have 3 numbers in an array and we want to send them all as parameters of a function, we can do it with one keyword. 
+##### Spread as function parameters
+```javascript
+let numbers = [2,3,5];
+function sumThree(num1,num2,num3){
+    return num1 + num2 + num3;
+}
+// We can call the function with the array values separately with spread syntax
+console.log(sumThree(...numbers));
+```
+
+## Extra materials &#x1F4D9;
+[A good piece about functions](https://dev.to/howtocodejs/an-overview-of-javascript-functions-47id?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email)
+
+[When to use arrow functions](https://medium.freecodecamp.org/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26)
+
+[How to use spread syntax](https://codeburst.io/javascript-es6-the-spread-syntax-f5c35525f754)
