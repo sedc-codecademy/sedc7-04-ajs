@@ -1,0 +1,17 @@
+
+
+//3nd task clean the array from non integer values
+const dataToClean = [1, NaN, 2, [3, NaN,'', 5] ];
+// [1, 2, 3, 5]
+
+
+
+//4rd get maximum time from array from any 4 values between 0-9
+//[1,2,3,4] input expected output 23:41 23 hours and 41 minutes
+
+let arr = [1,2,3,4] // 0-9
+
+function timeCalc(arr)
+{
+    
+}
