@@ -11,6 +11,9 @@ This repository will contain every piece of material about the subject. It will 
 * Code that we write on the classes
 * Exercises
 * Homeworks
+## Contact
+Dragan Gelevski: gdragan6@gmail.com
+Dejan Blazeski: dejan.pblazheski@seavus.com
 ## Course Classes
 Coverage of the classes:
 #### [Class 1](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class1/README.md)

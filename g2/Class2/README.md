@@ -89,6 +89,15 @@ button.addEventListener("click", function(){
 ## Arrow Functions
 Arrow functions are somewhat new addition to the javascript language. They are a shorter version of the anonymous functions we discussed above. We can use them to simplify and shorten our code. Because they were added in the javascript standard in 2015 they may not be supported in very old browsers ( ex: internet explorer ). There are almost no differences in the two except that the one is shorter than the other. Arrow functions don't need **{ }** if they have only one expression or even a return. If you have more than one expression you will need { } and return. Parameters are put in **( )** only if there are more than one. One parameter don't need ( ).
 #### Arrow functions vs Normal anonymous functions
+#### no parameter, one expression
+```javascript
+// Anonymous function
+let logSomething = function(){
+    console.log("Hello there!");
+}
+// Arrow function
+let logSomething = () => console.log("Hello there!");
+```
 ##### one parameter, one expression
 ```javascript
 // Anonymous function
