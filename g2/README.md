@@ -13,6 +13,7 @@ This repository will contain every piece of material about the subject. It will 
 * Homeworks
 ## Contact
 Dragan Gelevski: gdragan6@gmail.com
+
 Dejan Blazeski: dejan.pblazheski@seavus.com
 ## Course Classes
 Coverage of the classes:
