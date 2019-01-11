@@ -22,5 +22,5 @@ Coverage of the classes:
 * How to write AJAX calls
 * What are APIs ( and what are some free APIs to use )
 
-#### [Class 2] (https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class2/README.md)
+#### [Class 2](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class2/README.md)
 * Functions
