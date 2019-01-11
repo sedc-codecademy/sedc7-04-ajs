@@ -1,4 +1,4 @@
-# JavaScript Advanced Group 2
+# JavaScript Advanced Group 2 &#x1F4D8;
 **This is a subject that is built upon the previous subject JavaScript Basics. The main goal of this course is to get a better understanding of JavaScript and learn some more advanced features that the language has to offer. We will learn the following:**
 * Make AJAX calls and get content from JSON response
 * An in depth knowledge on functions
@@ -13,6 +13,14 @@ This repository will contain every piece of material about the subject. It will 
 * Homeworks
 ## Course Classes
 Coverage of the classes:
-#### Class 1
-* JSON
-* AJAX 
+#### [Class 1](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class1/README.md)
+* Retrospective about the previous subject
+* Introduction to the AJS subject
+* How to get and add things to the internet
+* What is JSON and how to use JSON data
+* What is AJAX
+* How to write AJAX calls
+* What are APIs ( and what are some free APIs to use )
+
+#### [Class 2](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class2/README.md)
+* Functions

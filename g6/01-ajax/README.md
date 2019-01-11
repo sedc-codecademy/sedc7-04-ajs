@@ -1,4 +1,4 @@
-# 1. AJAX &#x1F34E;
+# 1. AJAX
 ## Getting things from the Internet
 There are a lot of services and sites on the Internet that allow us to use some data or information that they hold such as the weather, sport scores, statistics about the environment, movies, music etc. In order to get those information we have to send a request for them first to the site or service that offers the data in the first place. If we are allowed to make that request we get a response with a package of the data we requested for in a format called JSON. If we are not allowed we get a response but with a status that describes why we didn't get our data. Through these requests we communicate with this sites and services whether we want to get something or add something. 
 
@@ -6,10 +6,11 @@ There are a lot of services and sites on the Internet that allow us to use some 
 JSON is one of the most commonly used format in which we send or get packages to the Internet. It's actually a simple text file that contains structured information. When you see the structure it is very similar to a JavaScript object. It consists of keys ( in JS Objects, properties ) and values. The values can be of any type such as numbers, strings boolean, array or another object. 
 
 ##### A JavaScript Object
+---
 ```javascript
 let someObject = {
-  trainer: "Dragan Gelevski",
-  assistant: "Dejan Blazeski",
+  trainer: "Igor Igeto Mitkovski",
+  assistant: "Martin Panovski",
   students: [
     "Bob",
     "Samantha",
@@ -21,10 +22,11 @@ let someObject = {
 };
 ```
 ##### A json file
+---
 ```json
 {
-  "trainer": "Dragan Gelevski",
-  "assistant": "Dejan Blazeski",
+  trainer: "Igor Igeto Mitkovski",
+  assistant: "Martin Panovski",
   "students": [
     "Bob",
     "Samantha",
@@ -55,26 +57,12 @@ Making a request is always done through an http protocol call. That is the stand
 5. Write code as if you didn't get what you desired in an error method
 
 We can make the AJAX call using plain JavaScript, JQyery or with the new JavaScript feature called fetch.
-##### Plain JavaScript
-```javascript
-let xhr = new XMLHttpRequest();
-xhr.onload = function () {
-  if (xhr.status >= 200 && xhr.status < 300) {
-    console.log('The request succeeded!');
-    let resultParsed = JSON.parse(xhr.response);
-    console.log(resultParsed);
-  } else {
-    console.log('The request failed!');
-    console.log(xhr.responseText);
-  }
-};
-xhr.open('GET', 'https://raw.githubusercontent.com/sedc-codecademy/sedc7-04-ajs/master/g2/Class1/students.json');
-xhr.send();
-````
+
 ##### JQuery
+---
 ```javascript
 $.ajax({
-  url: "https://raw.githubusercontent.com/sedc-codecademy/sedc7-04-ajs/master/g2/Class1/students.json",
+  url: "https://raw.githubusercontent.com/Drakso/JavaScriptAjax/master/students3.json",
   success: function (response) {
     console.log('The request succeeded!');
     let resultParsed = JSON.parse(response);
@@ -85,17 +73,18 @@ $.ajax({
     console.log(response.responseText);
   }
 });
-````
+```
 ##### Fetch
+---
 ```javascript
-fetch('https://raw.githubusercontent.com/sedc-codecademy/sedc7-04-ajs/master/g2/Class1/students.json')
+fetch('https://raw.githubusercontent.com/Drakso/JavaScriptAjax/master/students3.json')
   .then(function(response) {
     return response.json();
   })
   .then(function(myJson) {
     console.log(myJson);
   });
-````
+```
 
 
 
@@ -128,4 +117,4 @@ Write optional parameters \
 ##### Bonus - Query parameters in URL
 Some APIs require some parameters to be passed in order for them to work. To pass things through the URL we use Query parameters. We write query parameters by first adding a ? after the link that we typed and then write the name of the parameter = the value. All parameters are divided by an &. \
 **Example:** We have an api that requires key and name values. The link is: https://madeupapi.com/api/users \
-Our link should be: https://madeupapi.com/api/users?key=24sfd123rasd3224fsfer3&name=dragan
+Our link should be: https://madeupapi.com/api/users?key=24sfd123rasd3224fsfer3&name=rick
