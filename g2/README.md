@@ -27,4 +27,11 @@ Coverage of the classes:
 * What are APIs ( and what are some free APIs to use )
 
 #### [Class 2](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class2/README.md)
-* Functions
+* Looking back at functions ( parameters, arguments, return )
+* Why and where we use functions
+* What are annonimous functions
+* What are arrow functions
+* Spread syntax and how to use it
+
+#### [Class 3](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class3/README.md)
+* Functions in depth
