@@ -190,6 +190,9 @@ button.addEventListener("click", ()=>{
 ```
 
 ## Extra materials &#x1F4D9;
+
+[A begginers guide to git](http://rogerdudler.github.io/git-guide/)
+
 [A good piece about functions](https://dev.to/howtocodejs/an-overview-of-javascript-functions-47id?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email)
 
 [When to use arrow functions](https://medium.freecodecamp.org/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26)
