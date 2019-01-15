@@ -96,6 +96,9 @@ let persons = [
     }
 ];
 
+// transformArray(persons, person => person.name)
+// persons.map(person => person.name)
+
 ///
 
 function getOddNumbers (numbers) {
@@ -140,4 +143,19 @@ function filterArray(array, predicate) {
 //   .filter(n => n % 2 !== 0)
 //   .map(n => getProperties(n))
 
-let lastNames = ["Jankov", "Stefanovski", "Johnson", "Petrov", "Blazevski"];
+let lastNames = [
+    "Jankov", 
+    "Stefanovski", 
+    "Johnson", 
+    "Petrov", 
+    "Blazevski"
+];
+
+let result = [
+    "Jankovski",
+    "Johnsonski",
+    "Petrovski"
+]
+
+// numbers = [1, 2, 3, 4, 5]
+// numbers.reduce( (sum, element) => sum + element ,0) 
