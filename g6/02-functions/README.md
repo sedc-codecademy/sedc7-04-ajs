@@ -1,4 +1,4 @@
-# Functions pt1 &#x1F34E;
+# Functions pt1
 ## What are functions 
 Functions are named blocks of code that we can store in memory for later use. We always try and use functions and wrap pieces of logic in functions as much as we can. This is a good practice because functions make our code:
 * More organized
@@ -16,7 +16,35 @@ function getFullName(firstName, lastName){
 }
 ```
 #### Parameters
-Everything that a function needs should be passed( given ) to the function. We do that with parameters. Parameters are point of entry of the function. They are variables that are acting like placeholders for values that we anticipate the caller to enter when calling the function. The parameters in the function above are firstName and lastName. When the person calls the function they will enter first name in the first position and last name in the second position. That is how javascript know which one is which, by the positions. Those names will then be replaced by the firstName and lastName placeholders in the whole function. If we call the function with more values than parameters the extra will be ignored. If we call a function with less values than parameters the ones that don't have a value will be undefined.
+Everything that a function needs should be passed ( given ) to the function. We do that with parameters. Parameters are point of entry of the function. They are variables that are acting like placeholders for values that we anticipate the caller to enter when calling the function. The parameters in the function above are firstName and lastName. When the person calls the function they will enter first name in the first position and last name in the second position. That is how javascript know which one is which, by the positions. Those names will then be replaced by the firstName and lastName placeholders in the whole function. If we call the function with more values than parameters the extra will be ignored. If we call a function with less values than parameters the ones that don't have a value will be undefined.
+In JavaScript we are allowed to pass a different number of arguments than we set in the declaration of the function, i.e. if we declare a function that accepts two arguments we can still call that function passing only one, or even three or more arguments
+
+```JavaScript
+function myFullName(name, nickname, lastName) {
+    if(nickname) {
+        return name + ' ' + nickname + ' ' + lastName;
+    } else {
+        return name + ' ' + lastName;
+    }
+}
+
+// ES6 syntax
+const myFullName = (name, nickname, lastName) => {
+    return nickname ? `${name} ${nickname} ${lastName}` :
+        `${name} ${lastName}`;
+};
+
+// even shorter ES6 syntax
+const myFullName = (name, nickname, lastName) => nickname ? `${name} ${nickname} ${lastName}` :
+        `${name} ${lastName}`;
+
+// How do we call it?
+myFullName('Igor', 'Igeto', 'Mitkovski');
+myFullName('Igor', undefined, 'Mitkovski');
+```
+
+
+
 #### Return
 Return is a keyword that means two things:
 * End of the execution of the function
@@ -68,6 +96,28 @@ function sum(num1,num2){
 console.log(sum(2,3));
 ```
 
+#### The Arguments property
+The arguments object is a local variable available within all non-arrow functions. You can refer to a function's arguments inside that function by using its arguments object. It has entries for each argument the function was called with, with the first entry's index at 0.
+
+For example, if a function is passed 3 arguments, you can access them as follows:
+
+```JavaScript
+arguments[0] // first argument
+arguments[1] // second argument
+arguments[2] // third argument
+```
+The arguments object is useful for functions called with more arguments than they are formally declared to accept. This technique is useful for functions that can be passed a variable number of arguments, such as Math.min(). This example function accepts any number of string arguments and returns the longest one:
+```JavaScript
+function longestString() {
+  var longest = '';
+  for (var i=0; i < arguments.length; i++) {
+    if (arguments[i].length > longest.length) {
+      longest = arguments[i];
+    }
+  }
+  return longest;
+}
+```
 ## Anonymous functions
 Anonymous functions or more precisely function expressions are functions that are not declared. They are written on the spot where we want them to be executed and when the code runs and gets to the line where they are written, they immediately execute the code that they hold and return a value at the same spot. We use these functions every time we need a function to be executed at some point in time once.
 
@@ -138,21 +188,11 @@ button.addEventListener("click", ()=>{
     console.log("Button is clicked!");
 })
 ```
-## Spread syntax
-With spread syntax we can pass collection values as separate values in places. For instance if we have 3 numbers in an array and we want to send them all as parameters of a function, we can do it with one keyword. 
-##### Spread as function parameters
-```javascript
-let numbers = [2,3,5];
-function sumThree(num1,num2,num3){
-    return num1 + num2 + num3;
-}
-// We can call the function with the array values separately with spread syntax
-console.log(sumThree(...numbers));
-```
 
 ## Extra materials &#x1F4D9;
+
+[A begginers guide to git](http://rogerdudler.github.io/git-guide/)
+
 [A good piece about functions](https://dev.to/howtocodejs/an-overview-of-javascript-functions-47id?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email)
 
 [When to use arrow functions](https://medium.freecodecamp.org/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26)
-
-[How to use spread syntax](https://codeburst.io/javascript-es6-the-spread-syntax-f5c35525f754)

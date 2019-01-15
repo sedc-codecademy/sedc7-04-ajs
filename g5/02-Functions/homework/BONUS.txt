@@ -1,0 +1,11 @@
+//We have an array with numbers from 0 to 99 [0,1,2,3 .... 99], but two numbers in array are missing
+//Make an algorythm to find the missing numbers.
+//Lets assume that in the array missing numbers are 56 and 89
+
+//Expected result is new array with number [56, 89]
+
+//Use the code to setup the taks
+
+let arrayOfNumbers = Array.apply(null, {length: 100}).map(Function.call, Number); //This will generate new array with numbers from 0 to 99
+arrayOfNumbers.splice(56, 1);
+arrayOfNumbers.splice(88, 1);
