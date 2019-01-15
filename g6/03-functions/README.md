@@ -1,4 +1,4 @@
-# Functions pt1
+# Functions pt2
 
 ### Closures
 
