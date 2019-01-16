@@ -1,0 +1,48 @@
+//3nd task clean the array from non integer values
+const dataToClean = [1, NaN, 2, [3, NaN,'', 5] ];
+// [1, 2, 3, 5]
+
+function checkIsNumber(i)
+{
+	return i / i === 1;
+}
+
+function loopArray(arr)
+{
+	let numbers = [];
+	
+	for(let i of arr)
+	{
+		if(typeof i === "object")
+		{
+			numbers = numbers.concat(loopArray(i));
+		}
+		else
+		{
+			if(checkIsNumber(i))
+			numbers.push(i);
+		}		
+	}
+	
+	return numbers;
+}
+
+
+
+//4rd get maximum time from array from any 4 values between 0-9
+//[1,2,3,4] input expected output 23:41 23 hours and 41 minutes
+
+let arr = [1,2,3,4] // 0-9
+
+function timeCalc(arr)
+{
+	var perm = arr.reduce(function permute(res, item, key, arr) {
+		return res.concat(arr.length > 1 && arr.slice(0, key).concat(arr.slice(key + 1)).reduce(permute, []).map(function(perm) { return [item].concat(perm); }) || item);
+	}, []);
+	
+	let time = perm.filter(x => parseInt(x.join('')) < 2359);
+	
+	time = time.map(x => parseInt(x.join(''))).sort(function(a, b){return b-a});
+
+	return time.length ? time[0] : false;
+}
