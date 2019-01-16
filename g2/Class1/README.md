@@ -1,4 +1,4 @@
-# 1. AJAX
+# 1. AJAX &#x1F34E;
 ## Getting things from the Internet
 There are a lot of services and sites on the Internet that allow us to use some data or information that they hold such as the weather, sport scores, statistics about the environment, movies, music etc. In order to get those information we have to send a request for them first to the site or service that offers the data in the first place. If we are allowed to make that request we get a response with a package of the data we requested for in a format called JSON. If we are not allowed we get a response but with a status that describes why we didn't get our data. Through these requests we communicate with this sites and services whether we want to get something or add something. 
 
