@@ -45,22 +45,100 @@ function subtract(num1, num2){
 // let myFunc = calculator9000("-");
 // console.log(myFunc(2,6));
 
+// function sum(num1, num2){
+//     return num1 + num2;
+// }
+// // afdasdasdasdasdasdafdasdasdasdasdasdafdasdasdasdasdasd
+// //afdasdasdasdasdasdafdasdasdasdasdasdafdasdasdasdasdasd
+// //afdasdasdasdasdasdafdasdasdasdasdasdafdasdasdasdasdasd
+// // afdasdasdasdasdasdafdasdasdasdasdasdafdasdasdasdasdasd
+// //afdasdasdasdasdasdafdasdasdasdasdasdafdasdasdasdasdasd
+// //afdasdasdasdasdasdafdasdasdasdasdasdafdasdasdasdasdasd
+// sum.description = "This is a function that sums two numbers!";
+// sum.createdBy = "Dragan";
+// sum.modifiedBy = "Dejan";
+// sum.sumThree = (num1, num2, num3) => num1 + num2 + num3;
+// console.log(sum.description);
+// console.log(sum(2,6));
+// console.log(sum.sumThree(2,5,6));
+
+// function getFullName(firstName, lastName){
+//     var result = `${firstName} ${lastName}`;
+//     console.log(result);
+// }
+
+// function getFullName1(firstName, lastName){
+//     if(firstName.length > 1 && lastName.length > 1){
+//         //var result = `${firstName} ${lastName}`;
+//         let result = `${firstName} ${lastName}`;
+//         var hello = "Hey there!";
+//         console.log(result);
+//     }
+//     console.log(hello);
+//     // console.log("Diskutabilno: " + result);
+// }
+
+
+// //getFullName("Cave", "Johnson");
+// getFullName1("Cave", "Johnson");
+// // console.log(result);
+
+// // var y = 5;
+// // var y = 6;
+// // console.log(y);
+// let x = 5;
+// x = 6;
+// console.log(x);
+
+// let ten =  10; // Global scope
+// function sumPlusOne(num1, num2){
+// 	let one =  1; // Function sumPlusOne scope
+//     console.log(num1 + num2 + one);
+// 	function add5(number){
+//         console.log(one);
+//         let insideFunction = 100;
+// 		console.log(number +  5); // Function add5 scope
+//     };
+//     //console.log(insideFunction); // WILL NOT WORK
+// 	add5(one);
+// 	function add10(number){
+// 		console.log(number +  ten); // Function add10 scope
+// 	};
+// 	add10(ten);
+// }
+// sumPlusOne(ten,7);
+
+// let func = () => {
+//     let result = 5;
+//     console.log(result);
+// };
+
+// func();
+
+// let result = 5;
+// console.log(result);
+
+// result = 10;
+
+// (() => {
+//     let result = 5;
+//     console.log(result);
+// })();
+
+// (function(num1, num2) {
+//     console.log(num1 + num2);
+// })(2, 5);
+
+// let result = (function(num1, num2) {
+//     return num1 + num2;
+// })(7, 5);
+// console.log(result);
+
 function sum(num1, num2){
-    return num1 + num2;
+    console.log(num1 + num2);
 }
-// afdasdasdasdasdasdafdasdasdasdasdasdafdasdasdasdasdasd
-//afdasdasdasdasdasdafdasdasdasdasdasdafdasdasdasdasdasd
-//afdasdasdasdasdasdafdasdasdasdasdasdafdasdasdasdasdasd
-// afdasdasdasdasdasdafdasdasdasdasdasdafdasdasdasdasdasd
-//afdasdasdasdasdasdafdasdasdasdasdasdafdasdasdasdasdasd
-//afdasdasdasdasdasdafdasdasdasdasdasdafdasdasdasdasdasd
-sum.description = "This is a function that sums two numbers!";
-sum.createdBy = "Dragan";
-sum.modifiedBy = "Dejan";
-sum.sumThree = (num1, num2, num3) => num1 + num2 + num3;
-console.log(sum.description);
-console.log(sum(2,6));
-console.log(sum.sumThree(2,5,6));
 
-
+sum((function suma(num1, num2) {
+    return num1 + num2;
+})(7, 5), 5)
 
