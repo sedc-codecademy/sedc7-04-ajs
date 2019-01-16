@@ -8,4 +8,4 @@ let lastNames = ['Petrov', 'Sulejmanov', 'Cavkov', 'Donev', 'Mitev', 'Artemov']
 let numArray = [5 ,12, 6, 2, 6, 765, 2, 12, 36, 4, 67, 2, 1, 85]
 
 // Write a closure function that will calculate square of a given number
-// Write the same closure but this time return the closure
+// Write the samecalculate
