@@ -9,31 +9,38 @@
 </head>
 
 <body>
+
+    <label for="filter">Filter by name:</label>
+    <input type="text" name="fitler" id="filter">
+    <button>Filter</button>
+
     <table>
         <thead>
             <tr class="title">
                 <th colspan="12">Fruit Nutritional Information (per 8oz serving)</th>
             </tr>
             <tr class="heading">
-                <th>Fruit</th>
-                <th>Calories</th>
-                <th>Total Fat</th>
-                <th>Sat. Fat</th>
-                <th>Salt</th>
-                <th>Total Carbs</th>
-                <th>Fiber</th>
-                <th>Sugars</th>
-                <th>Protein</th>
-                <th>Calcium</th>
-                <th>Potassium</th>
+                <th data-field="name">Fruit</th>
+                <th data-field="calories">Calories</th>
+                <th data-field="totalFat">Total Fat</th>
+                <th data-field="saturatedFat">Sat. Fat</th>
+                <th data-field="salt">Salt</th>
+                <th data-field="totalCarbs">Total Carbs</th>
+                <th data-field="fiber">Fiber</th>
+                <th data-field="sugars">Sugars</th>
+                <th data-field="protein">Protein</th>
+                <th data-field="calcium">Calcium</th>
+                <th data-field="potasium">Potassium</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="fruits-container">
         </tbody>
     </table>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
+    <script src="fruits.js"></script>
+    <script src="fruits-code.js"></script>
 </body>
 
 </html>
