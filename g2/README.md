@@ -34,4 +34,14 @@ Coverage of the classes:
 * Spread syntax and how to use it
 
 #### [Class 3](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class3/README.md)
-* Functions in depth
+* Quick retrospective on the homework and the dificulties of the material
+* Discussion on how to put important features in functions
+* What is a first class citizen in programming
+* All the things we can do with functions
+* Discussion on how to add ajax call in a function
+* What is scope
+* Types of scope and how they are different
+* What are self invoking functions
+
+#### [Class 4](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class4/README.md)
+* Higher order functions
