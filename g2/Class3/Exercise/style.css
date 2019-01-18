@@ -1,0 +1,74 @@
+*{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h1 {
+  font-size: 3em;
+  color:white;
+  text-align: center;
+}
+body {
+  background-image: url("http://innerspaceintegration.com/wp-content/uploads/2016/06/earth-from-space-hd-wallpaper-1-thin.jpg");
+  background-size: cover;
+}
+
+table {
+  padding: 10px;
+  table-layout: fixed;
+  font-size: 1.2em;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: none;
+}
+
+tr {
+  padding: 10px;
+}
+th {
+  text-align: center;
+}
+img{
+  height: 8vh;
+}
+
+td{
+  text-align: center;
+  word-wrap:break-word;
+  width: 10%;
+}
+form{
+  text-align: center;
+  padding: 3%;
+}
+input {
+  width: 30%;
+  font-size: 1.8em;
+  color: white;
+  outline: none;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0);
+  border: 0px;
+  border-bottom: 4px solid white;
+  margin-right: 2%;
+}
+
+button {
+background: #192961;
+background-image: linear-gradient(to bottom, #192961, #061329);
+border-radius: 20px;
+color: #FFFFFF;
+outline: none;
+font-size: 1.6em;
+font-weight: 100;
+padding: 2vh;
+box-shadow: 1px 1px 20px 0px #000000;
+text-shadow: 1px 1px 20px #000000;
+border: solid #0E2442 1px;
+text-decoration: none;
+display: inline-block;
+cursor: pointer;
+  }
+  
+  button:hover {
+  background: #123A7A;
+  background-image: linear-gradient(to bottom, #123A7A, #102842);
+  text-decoration: none;
+  }

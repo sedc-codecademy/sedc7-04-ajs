@@ -1,0 +1,4 @@
+//Make an algorythm that print snowflakes on the screen at random X position while the start of Y is always 0.
+//Snowflakes should fall down on a random speed and with random pattern.
+//Once snowflakes get to the bottom it should look like there is a snow (Optional)
+

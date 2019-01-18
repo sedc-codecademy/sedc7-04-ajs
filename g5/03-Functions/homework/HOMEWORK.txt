@@ -1,0 +1,21 @@
+1st
+
+Write a JavaScript function that generates all combinations of a string.
+Example string: 'dog' 
+Expected Output: d,o,do,g,dg,og,dog
+
+//Write a JavaScript function that generates all combinations of a string.
+
+
+
+2nd
+
+Write a JavaScript function that reverse a number.
+Sample Data and output: 
+Example x = 32243; 
+Expected Output: 34223
+
+
+
+
+
