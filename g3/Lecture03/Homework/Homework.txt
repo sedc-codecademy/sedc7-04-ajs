@@ -1,0 +1,15 @@
+HOMEWORK:
+Make a Person object with the following properties :
+-firstName,
+-lastName,
+-dateOfBirth,
+-placeOfBirth,
+-details() method that will return full name and placeOfBirth
+-calculateAge() method that will return age in (days, months and years)
+
+BONUS:
+Make a Family object, that will have :
+-number of members,
+-array of all members,
+-method that will calculate average age of the family,
+-method that will calculate sum of all ages
