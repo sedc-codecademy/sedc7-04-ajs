@@ -15,6 +15,7 @@ This repository will contain every piece of material about the subject. It will 
 Dragan Gelevski: gdragan6@gmail.com
 
 Dejan Blazeski: dejan.pblazheski@seavus.com
+
 ## Course Classes
 Coverage of the classes:
 #### [Class 1](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class1/README.md)
@@ -29,12 +30,12 @@ Coverage of the classes:
 #### [Class 2](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class2/README.md)
 * Looking back at functions ( parameters, arguments, return )
 * Why and where we use functions
-* What are annonimous functions
+* What are anonymous functions
 * What are arrow functions
 * Spread syntax and how to use it
 
 #### [Class 3](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class3/README.md)
-* Quick retrospective on the homework and the dificulties of the material
+* Quick retrospective on the homework and the difficulties of the material
 * Discussion on how to put important features in functions
 * What is a first class citizen in programming
 * All the things we can do with functions
@@ -44,4 +45,13 @@ Coverage of the classes:
 * What are self invoking functions
 
 #### [Class 4](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class4/README.md)
-* Higher order functions
+* Talked about pure functions
+* Talked about function arguments and how they work
+* Made some impure functions, pure
+* Talked about recursion and when to use it
+* Talked about strict typing in JavaScript
+* Explained what Higher order functions are and showed some examples
+* Discussed chaining of high order functions and the difference between their return values
+
+#### [Class 5](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class5/README.md)
+* How to build an app
