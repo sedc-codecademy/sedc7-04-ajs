@@ -72,8 +72,28 @@ const delay = function (ms) {
 
 const url = "https://raw.githubusercontent.com/sedc-codecademy/sedc6-mean/master/data/quiz.json";
 
-fetch(url)
-    .then(data => data.json())
-    .then(json => console.log(json))
-    .catch(error => console.log(error));
+// fetch(url)
+//     .then(data => data.json())
+//     .then(json => console.log(json))
+//     .catch(error => console.log(error));
     
+fetch("https://raw.githubusercontent.com/sedc-codecademy/sedc7-04-ajs/master/g1/Lecture%2005/fruits.json")
+    .then(data => data.json())
+    .then(json => {
+        const bestSugar = findMaxSugar(json);
+        console.log(bestSugar.name);
+    })
+    .catch(error => console.log(error));
+
+
+const findMaxSugar = (fruits) => {
+    let max = {
+        sugars: Number.NEGATIVE_INFINITY
+    };
+    for (const fruit of fruits) {
+        if (fruit.sugars > max.sugars) {
+            max = fruit;
+        }
+    }
+    return max;
+}
