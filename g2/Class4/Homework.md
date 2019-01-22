@@ -1,52 +1,10 @@
 
-# Exercises
-## Exercise 1
-Make these functions pure:
-```html
-<input id="number1">
-<input id="number2">
-<button id="calculate"> calc </button>
-<h1 id="result"></h1>
-```
-#### Task 1
-
-```javascript
-result = 0;
-function sum(){
-	let num1 = document.getElementById("number1").value;
-	let num2 = document.getElementById("number2").value;
-	return num1 + num2
-}
-
-function subtract(num1, num2){
-	document.getElementById("result").innerText = num1 - num2;
-}
-
-function multiply(num1, num2){
-	result = num1 * num2;
-	return result;
-}
-function checkZero(num1){
-	if(num1 === 0){
-		document.getElementById("result").innerText = "Can't divide by zero";
-		return false;
-	}
-	return true;
-}
-function divide(num1, num2){
-	if(checkZero(num2)){
-		result = num1 + num2;
-		return result;
-	}
-}
-```
-
-## Exercise 2
-There is a JSON file with students. Make a call to the file and get the following data from it: 
-* All students with an average grade higher than 3
-* All female students with an average grade of 5
-* All male students who live in Skopje and are over 18 years old
-* The average of all female students over the age  of 24
-* All male students with a name starting with B and average grade over 2
-
-Use higher order functions to find the answers
+# Homework
+## Refactoring the countries app and adding new features
+The app for countries is in the folder class3. For this homework you need to refactor the code and add new features to it. The new features will be:
+* If there are more than 5 results in a search then make a next button  to show the other. ( if there are even more than that there should be next button again until the last countries)
+* There should be buttons for filtering the current result:
+** Button that only shows the country with largest population from the results
+** Button that only shows the largest country by area from the results
+* The coulmns population and area should be sortable by number. ( if you click the column title it should sort the countries in ascending order. If you click again it will sort them by descending )
+* The columns name and capital shound be sortable by first letter. ( if you click the column title it should sort the countries by the first letter in ascending order. If clicked again it shoud sort the countries in descending.
