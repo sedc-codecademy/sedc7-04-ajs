@@ -1,0 +1,5 @@
+
+https://oscarotero.com/jquery/  
+http://gregfranko.com/jquery-best-practices
+http://youmightnotneedjs.com/
+http://youmightnotneedjquery.com/
