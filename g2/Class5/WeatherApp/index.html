@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#"> 
+      <img src="https://image.flaticon.com/icons/svg/1400/1400310.svg" alt=""> 
+      Weather App
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" id="statsNav">WeatherStats</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="hourlyNav">Hourly</a>
+        </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" placeholder="Example: Skopje" aria-label="Enter name of City">
+          <button class="btn btn-outline-light my-2 my-sm-0">Search</button>
+      </div>
+    </div>
+  </nav>
+  <div class="container" id="main" align="center">
+    <h1 id="message"></h1>
+    <div id="stats"></div>
+    <!-- <div class="row">
+      <div class="col align-self-center" id="weatherIcon"></div>
+    </div> -->
+    <div id="hourly">
+      <div class="card">
+        <ul class="list-group list-group-flush" id="hourlyTable">
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-2"><b>Weather</b></div>
+              <div class="col-md-2"><b>Time</b></div>
+              <div class="col-md-2"><b>Temperature</b></div>
+              <div class="col-md-2"><b>Humidity</b></div>
+              <div class="col-md-2"><b>Wind Speed</b></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

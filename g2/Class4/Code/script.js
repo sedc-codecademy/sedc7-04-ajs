@@ -78,16 +78,16 @@ let students = [
 	{firstName: "Strike", lastName: "K", grade: 4, age: 16},
 	{firstName: "Eric", lastName: "I", grade: 1, age: 17}
 ]
-let students2 = [
-	{firstName: "Bob", lastName: "H", grades: [
-		{subject: "Math", grade: 2},
-		{subject: "Science", grade: 3}
-	], age: 19},
-	{firstName: "Mel", lastName: "B", grades: [
-		{subject: "Math", grade: 3},
-		{subject: "Science", grade: 5}
-	], age: 33}
-]
+// let students2 = [
+// 	{firstName: "Bob", lastName: "H", grades: [
+// 		{subject: "Math", grade: 2},
+// 		{subject: "Science", grade: 3}
+// 	], age: 19},
+// 	{firstName: "Mel", lastName: "B", grades: [
+// 		{subject: "Math", grade: 3},
+// 		{subject: "Science", grade: 5}
+// 	], age: 33}
+// ]
 
 // Without higher order function
 // for (let i = 0; i < students.length; i++) {
@@ -165,9 +165,62 @@ let students2 = [
 // .reduce((sum, student) => sum += student.grade, 0);
 // console.log(allGradesExeptLowest);
 
-let allGradesExeptLowest = students
-.filter(student => 
-	student.grade > 1)
-		.reduce((names, student) => 
-			names += student.firstName + " ", "Students:");
-console.log(allGradesExeptLowest);
+// let allGradesExeptLowest = students
+// .filter(student => 
+// 	student.grade > 1)
+// 		.reduce((names, student) => 
+// 			names += student.firstName + " ", "Students:");
+// console.log(allGradesExeptLowest);
+
+
+
+
+
+
+let studentss = [
+	{name: "Bob", grade: 2},
+	{name: "Jill", grade: 3},
+	{name: "Greg", grade: 1},
+	{name: "Ann", grade: 5},
+	{name: "Bill", grade: 4},
+	{name: "Jane", grade: 4},
+];
+
+// let sum = studentss.reduce((suma, student)=>
+// 	suma = (suma + student.grade),0)/studentss.length;
+// console.log(sum);
+// let sumNames = studentss.reduce((suma, student)=>
+// 	suma = (suma + student.name + " "),"Students: ");
+// console.log(sumNames);
+// step 1: suma = 0; student = {name: "Bob", grade: 2}
+// step 2: suma(0) = suma(0) + student.grade(2)
+// step 3: suma = 2; stident = {name: "Jill", grade: 3}
+// step 4: suma(2) = suma(2) + student.grade(3)
+// itn. itn.
+// step 16: suma = 19;
+// step 17 return suma;
+
+let numbers = [2,43,5,6,3,6,7];
+let grades = studentss.sort((a,b) => {
+	return b.grade - a.grade;
+})
+// let names = studentss.sort((a,b) => {
+// 	return a.name < b.name ? 1 : -1;
+// })
+console.log(grades);
+// console.log(names);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
