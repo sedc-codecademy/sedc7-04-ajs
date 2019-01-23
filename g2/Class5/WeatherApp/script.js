@@ -18,6 +18,7 @@ function getWeather(cityName) {
       let resultParsed = JSON.parse(xhr.response);
       console.log(resultParsed);
       let stats = getWeatherStats(resultParsed.list);
+      showStats(statsDiv, resultParsed);
       console.log(stats);
     } else {
       console.log("Problem getting the weather :(");
@@ -30,7 +31,7 @@ function getWeather(cityName) {
   xhr.open("GET", `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&APPID=74e59f6374abe0d9b758877616ae444c`);
   xhr.send();
 }
-// GET ALL STATS Function
+// GET ALL STATS FUNCTIONS
 function getWeatherStats(weatherList){
   console.log(weatherList);
   let averageTemp = weatherList
@@ -63,12 +64,44 @@ function getWeatherStats(weatherList){
     averageTemperature: Math.round(averageTemp),
     lowestTemperature: Math.round(lowestTemp),
     highestTemperature: Math.round(highestTemp),
-    averageHumidity: averageHumidity,
+    averageHumidity: Math.round(averageHumidity),
     lowestHumidity: lowestHumidity,
     highestHumidity: highestHumidity,
     coldestTime: coldestTime,
     warmestTime: warmestTime
   }
+}
+
+function showStats(element, response){
+  element.innerHTML = generateStats(getWeatherStats(response.list));
+}
+function generateStats(stats){
+  return `
+  <div class="row justify-content-center">
+      <div class="col-md-6 col-sm-12 title">Temperature</div>
+      <div class="col-md-6 col-sm-12 title">Humidity</div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-sm-12 stat"><b>Average:</b> ${stats.averageTemperature}&#8451;</div>
+      <div class="col-md-6 col-sm-12 stat"><b>Average:</b> ${stats.averageHumidity}%</div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-sm-12 stat"><b>Highest:</b> ${stats.highestTemperature}&#8451;</div>
+      <div class="col-md-6 col-sm-12 stat"><b>Highest:</b> ${stats.highestHumidity}%</div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-sm-12 stat"><b>Lowest:</b> ${stats.lowestTemperature}&#8451;</div>
+      <div class="col-md-6 col-sm-12 stat"><b>Lowest:</b> ${stats.lowestHumidity}%</div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-4 col-sm-12 title">Coldest Time</div>
+      <div class="col-md-4 col-sm-12 title">Warmest Time</div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-4 col-sm-12 stat">${stats.coldestTime.toLocaleString()}</div>
+      <div class="col-md-4 col-sm-12 stat">${stats.warmestTime.toLocaleString()}</div>
+    </div>
+  `
 }
 
 // Event Handlers
