@@ -8,9 +8,67 @@ let statsNav = document.getElementById("statsNav");
 let hourlyNav = document.getElementById("hourlyNav")
 let message = document.getElementById("message");
 
-// Functions
+// GET WEATHER
 function getWeather(cityName) {
-//api call
+  let xhr = new XMLHttpRequest();
+  xhr.onload = function () {
+    if (xhr.status >= 200 && xhr.status < 300) {
+      console.log("We got the weather!");
+      message.innerText = "";
+      let resultParsed = JSON.parse(xhr.response);
+      console.log(resultParsed);
+      let stats = getWeatherStats(resultParsed.list);
+      console.log(stats);
+    } else {
+      console.log("Problem getting the weather :(");
+      console.log(JSON.parse(xhr.responseText).message);
+      statsDiv.innerHTML = "";
+      hourlyTable.innerHTML = "";
+      message.innerText = JSON.parse(xhr.responseText).message;
+    }
+  };
+  xhr.open("GET", `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&APPID=74e59f6374abe0d9b758877616ae444c`);
+  xhr.send();
+}
+// GET ALL STATS Function
+function getWeatherStats(weatherList){
+  console.log(weatherList);
+  let averageTemp = weatherList
+  .map(x => x.main.temp)
+  .reduce((x,y) => x+=y, 0)
+  /weatherList.length;
+  let lowestTemp = weatherList
+  .map(x => x.main.temp_min)
+  .reduce((x, y) => x = y < x ? y : x, Infinity);
+  let highestTemp = weatherList
+  .map(x => x.main.temp_max)
+  .reduce((x, y) => x = y > x ? y : x, -Infinity);
+  let averageHumidity = weatherList
+  .map(x => x.main.humidity)
+  .reduce((x,y) => x+=y, 0)
+  /weatherList.length;
+  let lowestHumidity = weatherList
+  .map(x => x.main.humidity)
+  .reduce((x, y) => x = y < x ? y : x, Infinity);
+  let highestHumidity = weatherList
+  .map(x => x.main.humidity)
+  .reduce((x, y) => x = y > x ? y : x, -Infinity);
+  let coldestTime = weatherList
+  .reduce((x, y) => x = y.main.temp < x.main.temp ? y : x, weatherList[0]).dt_txt;
+  coldestTime = new Date(coldestTime);
+  let warmestTime = weatherList
+  .reduce((x, y) => x = y.main.temp > x.main.temp ? y : x, weatherList[0]).dt_txt;
+  warmestTime = new Date(warmestTime);
+  return {
+    averageTemperature: Math.round(averageTemp),
+    lowestTemperature: Math.round(lowestTemp),
+    highestTemperature: Math.round(highestTemp),
+    averageHumidity: averageHumidity,
+    lowestHumidity: lowestHumidity,
+    highestHumidity: highestHumidity,
+    coldestTime: coldestTime,
+    warmestTime: warmestTime
+  }
 }
 
 // Event Handlers
