@@ -172,14 +172,6 @@ let students = [
 // 			names += student.firstName + " ", "Students:");
 // console.log(allGradesExeptLowest);
 
-// let grades = students.sort((a,b) => {
-// 	return b.age - a.age;
-// })
-// let names = students.sort((a,b) => {
-// 	return a.firstName < b.firstName ? 1 : -1;
-// })
-// console.log(grades);
-// console.log(names);
 
 
 
@@ -194,12 +186,12 @@ let studentss = [
 	{name: "Jane", grade: 4},
 ];
 
-let sum = studentss.reduce((suma, student)=>
-	suma = (suma + student.grade),0)/studentss.length;
-console.log(sum);
-let sumNames = studentss.reduce((suma, student)=>
-	suma = (suma + student.name + " "),"Students: ");
-console.log(sumNames);
+// let sum = studentss.reduce((suma, student)=>
+// 	suma = (suma + student.grade),0)/studentss.length;
+// console.log(sum);
+// let sumNames = studentss.reduce((suma, student)=>
+// 	suma = (suma + student.name + " "),"Students: ");
+// console.log(sumNames);
 // step 1: suma = 0; student = {name: "Bob", grade: 2}
 // step 2: suma(0) = suma(0) + student.grade(2)
 // step 3: suma = 2; stident = {name: "Jill", grade: 3}
@@ -208,6 +200,15 @@ console.log(sumNames);
 // step 16: suma = 19;
 // step 17 return suma;
 
+let numbers = [2,43,5,6,3,6,7];
+let grades = studentss.sort((a,b) => {
+	return b.grade - a.grade;
+})
+// let names = studentss.sort((a,b) => {
+// 	return a.name < b.name ? 1 : -1;
+// })
+console.log(grades);
+// console.log(names);
 
 
 
