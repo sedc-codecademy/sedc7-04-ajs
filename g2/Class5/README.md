@@ -32,3 +32,16 @@ Ex: https://api.openweathermap.org/data/2.5/forecast?q=skopje&units=metric&APPID
 **Icon Link:** http://openweathermap.org/img/w/ICON-CODE-HERE.png
 
 Ex: http://openweathermap.org/img/w/10d.png
+
+### Planning phase
+In this step we already analysed the stuff that we need and the requirements for the application. Now we have to plan it. Planning is one of the most important part of the development process. We take the whole problem of building the app and create smaller chunks or tasks that we can complete. 
+1.  Create HTML page and connect a script, css document and libraries
+2. Create the navigation bar, input and button
+3. Connect the button with the script
+4. Create a function for calling the API by city name
+5. Connect the function with the input data when the button is clicked
+6. Build the navigation links/buttons mechanic to change the view
+7. Create a function that gets all the needed statistics and returns them
+**Hint:** use an object as a return value ( bundle the stats in to one package )
+8. Create a function for printing the stats in the weather stats view
+9. Create a function for printing the table for hourly stats
