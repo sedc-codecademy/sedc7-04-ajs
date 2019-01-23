@@ -45,3 +45,8 @@ In this step we already analysed the stuff that we need and the requirements for
 **Hint:** use an object as a return value ( bundle the stats in to one package )
 8. Create a function for printing the stats in the weather stats view
 9. Create a function for printing the table for hourly stats
+### Coding phase
+In this phase we start coding all the tasks that we have planned and written in the planning phase. So we are building and creating the application here. We can always go back and add a task in the planning list if we encounter some feature that we missed in the planning. 
+
+### Testing phase
+This is a phase where we spend time testing our code and checking if the built product correlates with the requirements. When we encounter a problem, missing requirement or something out of place we go back to the coding phase to fix the problems and then go back to testing. This cycle is done when we are satisfied with the complete product. 
