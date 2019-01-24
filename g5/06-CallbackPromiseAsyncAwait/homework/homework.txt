@@ -1,0 +1,8 @@
+1.Use the API endpoints from : https://jsonplaceholder.typicode.com/ to display all albums on the screen in a UL list.
+Use CSS for styling the list and results on the screen.
+
+2. Once user click on an album use the same API to get the photos by and display the photos by albumID (selected albumID).
+
+Complete this actions by using callbacks or promises, also using functions for each action.
+
+Examples of the code are already provided in the class examples how to complete the actions.
