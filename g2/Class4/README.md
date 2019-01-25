@@ -280,7 +280,7 @@ console.log(sortedStudents); // Sorted
 console.log(students); // Original order
 ```
 
-![Pass by refference ](https://www.mathwarehouse.com/programming/images/pass-by-reference-vs-pass-by-value-animation.gif)
+![Pass by refference ](https://github.com/Drakso/AJS2019/blob/master/Class3/img/passbyrefference.gif?raw=true)
 
 
 ## Extra materials &#x1F4D9;
