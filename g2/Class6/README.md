@@ -1,3 +1,4 @@
+
 # Javascript under the hood &#x1F34E;
 ## Where and how is my JS code running?
 Modern javascript runs most of the time in the browser. This means that it gets executed and lives in the browser, by the browser engine and compiler. This is really important because javascript was not aways compiled and refined like it is today. Today we don't just execute javascript, but our scripts actually work with the browser hand in hand to load modern web pages. Javascript works in one thread. This means that there is only one stack or queue for code or tasks to be executed and they are beeing executed one by one. When we execute some functions they go to the top of the stack, they get executed and go out of the stack one by one. But what if one of those function is waiting for some response from the internet? Basically all functions after that should just wait for the function that waits for the call to finish right? Well this will freeze our web page, and we don't want our page frozen on every call we make. That is why javascript delegates waiting tasks to the browser. 
@@ -41,3 +42,114 @@ cb1
 
 #### behind the scenes
 ![behind the scenes](https://cdn-images-1.medium.com/max/1000/1*TozSrkk92l8ho6d8JxqF_w.gif)
+
+## Callback functions
+Callback functions are functions that are executed inside of other functions ( usually after the execution of the other, parent function ). Since javascript executes line by line and throws functions out of the stack when we have to wait for them, it is easy to see that sometimes we would need a system that actually executes the code in our defined order. This is where callbacks come to the picture. If we want to be sure that a function is executed after another, then we just pass that function as an argument to the first one. That way when the first one completes inside of it we call the second one. This way we keep the order of execution. 
+
+#### simple callback function
+```javascript
+function calculate(callback, num1, num2){
+	console.log("calculating...");
+	return callback(num1,num2);
+};
+let result = calculate((x, y) => x + y, 2, 5);
+console.log(result);
+```
+#### event ( callback ) queue
+![enter image description here](https://cdn-images-1.medium.com/max/1000/1*KGBiAxjeD9JT2j6KDo0zUg.png)
+All callback functions from our code go to the corresponding browser API and then when it is done it goes to this queue. Then it waits its turn to get on the stack and get executed. This include callbacks from event handlers such as click events ( when clicking a button the callback we attached to the handler comes here in the callback queue ), waiting on calls from an AJAX request, waiting on a setTimeout etc. 
+
+## Synchronous and asynchronous executing
+So as you can tell, javasript does not want to wait on code. Every piece of code that it knows it has to wait, it just delegates it to the browser and it continues its execution. This means that even tho we can write code in a certain order, javascript will not guarantee us that it will execute it by the order that we wrote it in. This for the most part is good, our page doesn't freeze when it waits for something and we can get the data we asked for later anyways. This is called: executing our code asynchronously. But what happens when we need our code to be running in a certain order? 
+#### two function calls in order
+```javascript
+function first(){
+	console.log("Frst thing!");
+} 
+function second(){
+	console.log("Second thing");
+}
+first();
+second();
+``` 
+**Result: **
+First thing
+Second thing
+#### two function calls but the first is delayed
+```javascript
+function first(){
+	setTimeout(()=>console.log("First thing"),1000);
+} 
+function second(){
+	console.log("Second thing!");
+}
+first();
+second();
+```
+**Result:**
+Second thing
+First thing
+
+#### two function calls but the first is delayed ( solved with a callback )
+```javascript
+function  first(callback){
+	setTimeout(()=>{
+		console.log("First thing");
+		callback();
+	},1000);
+}
+function  second(){
+	console.log("Second thing!");
+}
+first(second);
+```
+**Result:**
+First thing
+Second thing
+
+#### making an ajax call
+```javascript
+function  makeCall(url){
+	$.ajax({
+		url:  url,
+		success:  function (response) {
+			console.log('The request succeeded!');
+			return  response;
+		},
+		error:  function(response){
+			console.log('The request failed!');
+			return  response.responseText;
+		}
+	});
+}
+function  print(results){
+	console.log(results);
+}
+print(makeCall("https://swapi.co/api/people/1/"));
+```
+**Result:**
+undefined
+The request succeeded!
+#### making an ajax call with a callback
+```javascript
+function  makeCall(url){
+	$.ajax({
+		url:  url,
+		success:  function (response) {
+			console.log('The request succeeded!');
+			return  response;
+		},
+		error:  function(response){
+			console.log('The request failed!');
+			return  response.responseText;
+		}
+	});
+}
+function  print(results){
+	console.log(results);
+}
+print(makeCall("https://swapi.co/api/people/1/"));
+```
+**Result:**
+The request succeeded!
+{our response}
