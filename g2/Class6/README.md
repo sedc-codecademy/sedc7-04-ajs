@@ -162,3 +162,5 @@ The request succeeded!
 [Callbacks explained](https://www.sitepoint.com/callbacks-javascript/)
 
 [Amazing video about the event loop](https://www.youtube.com/watch?v=cCOL7MC4Pl0)
+
+We are learning git!
