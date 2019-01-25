@@ -3,13 +3,13 @@
 ## Where and how is my JS code running?
 Modern javascript runs most of the time in the browser. This means that it gets executed and lives in the browser, by the browser engine and compiler. This is really important because javascript was not aways compiled and refined like it is today. Today we don't just execute javascript, but our scripts actually work with the browser hand in hand to load modern web pages. Javascript works in one thread. This means that there is only one stack or queue for code or tasks to be executed and they are beeing executed one by one. When we execute some functions they go to the top of the stack, they get executed and go out of the stack one by one. But what if one of those function is waiting for some response from the internet? Basically all functions after that should just wait for the function that waits for the call to finish right? Well this will freeze our web page, and we don't want our page frozen on every call we make. That is why javascript delegates waiting tasks to the browser. 
 
+![javascript under the hood](https://github.com/Drakso/AJS2019/blob/master/Class6/img/javascriptandbrowser.png?raw=true)
 1. **JavaScript engine** 
 	1.1 **Memory Heap** - A region in memory used for storing values and other types of data in an ordered fashion
 	1.2 **Call Stack** - A structure where our functions are queued for running. It fills with tasks and it executes them in order LIFO ( Last In First Out )
 2. **Browser APIs** - The browser APIs that help javascript run smoothly and without clogging. 
 3.  **Even Queue** - A queue that holds the results of the browsers APIs ( callbacks ) until they are added to the stack and executed. The order of giving out these callbacks is FIFO ( First In First Out )
 4. **Event Loop** - A mechanism that checks if the stack is empty, and when it is pushes a task ( callback ) from the event queue on to the stack to be executed
-
 
 ## Working with the browser
 In the browser there are a lot of mechanisms for running our code smoothly. As we said there is a stack in the engine for running our code. There are also some helper APIs or services that help our code. These are the DOM, that help us map objects from our HTML, an HTTP client for making AJAX calls, services for waiting some ammount of time or repeating some code in some interval etc. When a task that needs waiting comes to the stack like an AJAX call the stack throws it out of the stack in to the browser service. There it waits for a response and our stack can continue making calls. When it is done it throws the code that needs to be executed from the AJAX call in a queue called task queue or callback queue.  A mechanism called the event loop stands between the stack where our code is executed and it's job is to check if the queue is empty and when it is, to put the code that is next in line from the callback queue in to the stack so it can be executed. After our stack is empty ( all tasks are executed in the stack ) our event loop gets the AJAX code and puts it in the stack so it can be executed. 
@@ -41,7 +41,7 @@ Bye
 cb1
 
 #### behind the scenes
-![behind the scenes](https://cdn-images-1.medium.com/max/1000/1*TozSrkk92l8ho6d8JxqF_w.gif)
+![behind the scenes](https://github.com/Drakso/AJS2019/blob/master/Class6/img/eventloop.gif?raw=true)
 
 ## Callback functions
 Callback functions are functions that are executed inside of other functions ( usually after the execution of the other, parent function ). Since javascript executes line by line and throws functions out of the stack when we have to wait for them, it is easy to see that sometimes we would need a system that actually executes the code in our defined order. This is where callbacks come to the picture. If we want to be sure that a function is executed after another, then we just pass that function as an argument to the first one. That way when the first one completes inside of it we call the second one. This way we keep the order of execution. 
@@ -56,7 +56,7 @@ let result = calculate((x, y) => x + y, 2, 5);
 console.log(result);
 ```
 #### event ( callback ) queue
-![enter image description here](https://cdn-images-1.medium.com/max/1000/1*KGBiAxjeD9JT2j6KDo0zUg.png)
+![event queue](https://github.com/Drakso/AJS2019/blob/master/Class6/img/callbackqueue.png?raw=true)
 All callback functions from our code go to the corresponding browser API and then when it is done it goes to this queue. Then it waits its turn to get on the stack and get executed. This include callbacks from event handlers such as click events ( when clicking a button the callback we attached to the handler comes here in the callback queue ), waiting on calls from an AJAX request, waiting on a setTimeout etc. 
 
 ## Synchronous and asynchronous executing
@@ -153,3 +153,12 @@ print(makeCall("https://swapi.co/api/people/1/"));
 **Result:**
 The request succeeded!
 {our response}
+
+## Extra materials &#x1F4D9;
+[Very usefull tool](http://latentflip.com/loupe/)
+
+[How does the event loop work](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5)
+
+[Callbacks explained](https://www.sitepoint.com/callbacks-javascript/)
+
+[Amazing video about the event loop](https://www.youtube.com/watch?v=cCOL7MC4Pl0)
