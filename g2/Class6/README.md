@@ -24,7 +24,7 @@ Will execute a function passed as an argument when a given time passes. The seco
 #### setInterval
 Will execute a function passed as an argument when a given time passes. The second parameter of this function is how many milliseconds do we actually want to wait, or delay some code. 
 ```javascript
-	setTimeout(()=>  console.log("This happens every two seconds!"), 2000)
+	setInterval(()=>  console.log("This happens every two seconds!"), 2000)
 ```
 
 #### a simple piece of code
