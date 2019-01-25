@@ -280,7 +280,7 @@ console.log(sortedStudents); // Sorted
 console.log(students); // Original order
 ```
 
-![Pass by refference ](https://github.com/Drakso/AJS2019/blob/master/Class3/img/passbyrefference.gif?raw=true)
+![Pass by refference ](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class4/img/passbyrefference.gif?raw=true)
 
 
 ## Extra materials &#x1F4D9;
