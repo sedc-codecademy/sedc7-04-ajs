@@ -1,0 +1,4 @@
+http://10.10.83.142:8080/selector.json
+
+http://10.10.83.142:8080/fruits.json
+

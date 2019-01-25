@@ -1,0 +1,75 @@
+<html>
+	
+	<head>FormValidation Callback</head>
+	
+	<body>
+		
+		<form>
+			<input type="text" name="activityTitle" placeholder="Enter activity title" id="activityTitle" />
+			<input type="date" name="activityDate" id="activityDate" />
+			<button onclick="return false;" type="button" id="addNewActivity" >Add Activity</button>
+		</form>
+		
+		<br />
+		
+		<ul id="activities"></ul>
+	
+	
+	<script type="text/javascript">
+		
+		let activities = [];
+		
+		function printActivitiesOnScreen()
+		{
+			let ul = document.getElementById("activities");
+			ul.innerHTML = '';
+			
+			for(let i of activities)
+			{
+				let li = document.createElement('li');
+				li.innerHTML = `${i.title} at ${i.date}`;
+				ul.appendChild(li);
+			}
+		};
+		
+		function validateData(activityData)
+		{
+			if(typeof activityData.title !== "string" || ! activityData.title.length)
+			{
+				alert('Title must be string');
+				activities.pop();
+				return false;
+			}
+			else if( ! activityData.date.match(/2019/i))
+			{
+				alert('Date is too old');
+				activities.pop();
+				return false;
+			}
+			
+			printActivitiesOnScreen();
+		}
+		
+		function storeActivity(activity, callbackValidator)
+		{
+			activities.push(activity);
+			console.log(activity);
+			callbackValidator(activity);
+		}
+		
+		function getFormData()
+		{
+			let activity = {};
+			activity.title = document.getElementById("activityTitle").value;
+			activity.date = document.getElementById("activityDate").value;
+			
+			storeActivity(activity, validateData);
+		}
+		
+		document.getElementById("addNewActivity").addEventListener('click', getFormData);
+		
+		//Extend the code with new UL element where each positive "valid" activity is going to be printed on screen
+		//in new LI element with title and date
+	</script>
+	</body>
+</html>
