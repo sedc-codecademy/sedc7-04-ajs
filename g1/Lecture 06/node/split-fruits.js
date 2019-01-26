@@ -15,4 +15,11 @@ fs.readFile("./fruits.json", { encoding: "UTF8" }, (err, data) => {
             }
         })
     }
+    const fruitList = JSON.stringify(fruits.map(fruit => fruit.name), null, 4);
+    fs.writeFile(`./fruit-list.json`, fruitList, (err) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+    })
 })
