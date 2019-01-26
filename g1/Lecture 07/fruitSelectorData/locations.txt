@@ -1,0 +1,3 @@
+http://10.10.83.142:8080/fruit-list.json
+
+http://10.10.83.142:8080/fruits/apples.json

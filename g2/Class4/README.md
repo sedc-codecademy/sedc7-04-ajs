@@ -214,6 +214,75 @@ let allGradesExeptLowest = students
 .reduce((sum, grade) => sum += grade, 0);
 ```
 
+#### sort
+Sort is a function that always returns an array of the same items, and of the same length but the items are sorted by some criteria. This function is different from the previous ones because not only does it return a result array, it laso changes the original array. So if we want to keep the original order of our array we have to create a new variable with the copy of the original variable and sort that, so that our original array can stay the same. The sorting is done through a simple system. We send a callback that takes two parameters. The two parameters are tested in some expression. If the expression returns less than 0, the first item is sent to a lower index than the second. If the expression returns more than 0 than the second is put to a lower index than the first. If the result is 0 then nothing happens.
+```javascript
+// Without higher order function
+function sortFunc(arr){
+    for(let i =0;i<arr.length;i++){
+        for(let j= i+1;j<arr.length;j++){
+            if(arr[i].grade<arr[j].grade){
+                let temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+return arr;
+}
+
+let sorted = sortFunc(students);
+
+// With higher order function using a function
+function sortGradesDesc(student1, student2){
+	return student2.grade - student1.grade; // descending
+}
+function sortGradesAsc(student1, student2){
+	return student1.grade - student2.grade; // ascending
+}
+studentss.sort(sortGradesDesc);
+
+// With higher order function using annonimous function
+studentss.sort(function(student1, student2){
+	return student2.grade - student1.grade; // Descending
+});
+studentss.sort(function(student1, student2){
+	return student1.grade - student2.grade; // Ascending
+});
+
+// With higher order function using arrow function
+studentss.sort((student1, student2) =>student2.grade - student1.grade); // Descending
+studentss.sort((student1, student2) =>student1.grade - student2.grade); // Ascending
+
+// Keeping the original array
+let sortedStudents = [...students];
+sortedStudents.sort((student1, student2) =>student2.grade - student1.grade); // Descending
+sortedStudents.sort((student1, student2) =>student1.grade - student2.grade); // Ascending
+```
+
+#### Copy of an original array?
+By just writing let newStudents = students; we do not make a copy of the students array in the newStudents. We just pass a refference to the students array. This means that the two variables point to the same place in memory. When methods like sort, change this array it changes in the memory, and with that in our both variables. 
+```javascript
+let sortedStudents = students;
+sortedStudents.sort((student1, student2) =>student2.grade - student1.grade);
+
+console.log(sortedStudents); // Sorted 
+console.log(students); // Also sorted? :(
+```
+
+#### Solution
+```javascript
+// We create a new array [] and inside the brackets with spread, we add all elements from the students array
+let sortedStudents = [...students];
+sortedStudents.sort((student1, student2) =>student2.grade - student1.grade);
+
+console.log(sortedStudents); // Sorted 
+console.log(students); // Original order
+```
+
+![Pass by refference ](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class4/img/passbyrefference.gif?raw=true)
+
+
 ## Extra materials &#x1F4D9;
 [Filter Map Reduce ](https://scotch.io/tutorials/list-processing-with-map-filter-and-reduce)
 
