@@ -36,7 +36,7 @@ const fetchData = url => {
         r.next ? 
         fetchData(r.next) : 
         populateTable(people)
-    })
+    }).catch(e => console.log(e))
 }
 const fetchPlanets = url => {
     fetch(url).then(r => r.json())

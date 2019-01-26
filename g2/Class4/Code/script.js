@@ -200,16 +200,33 @@ let studentss = [
 // step 16: suma = 19;
 // step 17 return suma;
 
-let numbers = [2,43,5,6,3,6,7];
-let grades = studentss.sort((a,b) => {
-	return b.grade - a.grade;
-})
+// // let numbers = [2,43,5,6,3,6,7];
+
+
+// function sortFunc(arr){
+//     for(let i =0;i<arr.length;i++){
+//         for(let j= i+1;j<arr.length;j++){
+//             if(arr[i].grade<arr[j].grade){
+//                 let temp = arr[i];
+//                 arr[i] = arr[j];
+//                 arr[j] = temp;
+//             }
+//         }
+//     }
+// return arr;
+// }
+
+// let sorted = sortFunc(students);
+// console.log(sorted);
+let sortedStudents = [...studentss];
+sortedStudents.sort((student1, student2) =>student2.grade - student1.grade); // Descending
+sortedStudents.sort((student1, student2) =>student1.grade - student2.grade); // Ascending
 // let names = studentss.sort((a,b) => {
 // 	return a.name < b.name ? 1 : -1;
 // })
-console.log(grades);
+console.log(studentss);
+console.log(sortedStudents);
 // console.log(names);
-
 
 
 

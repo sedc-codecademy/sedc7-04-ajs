@@ -54,4 +54,11 @@ Coverage of the classes:
 * Discussed chaining of high order functions and the difference between their return values
 
 #### [Class 5](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class5/README.md)
-* How to build an app
+* Discussed the steps of building an application
+* Went through the analyzing of our application and the requierments
+* Talked about API keys and how to obtain them and use them
+* Did some planning for the application
+* Coded a weather app
+
+#### [Class 6](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class6/README.md)
+* The event loop and callback functions
