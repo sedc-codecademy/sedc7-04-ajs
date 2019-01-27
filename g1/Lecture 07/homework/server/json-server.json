@@ -1,0 +1,4 @@
+{
+    "watch" : true,
+    "routes" : "routes.json"
+}
