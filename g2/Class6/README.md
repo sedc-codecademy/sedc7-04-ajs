@@ -3,7 +3,7 @@
 ## Where and how is my JS code running?
 Modern javascript runs most of the time in the browser. This means that it gets executed and lives in the browser, by the browser engine and compiler. This is really important because javascript was not aways compiled and refined like it is today. Today we don't just execute javascript, but our scripts actually work with the browser hand in hand to load modern web pages. Javascript works in one thread. This means that there is only one stack or queue for code or tasks to be executed and they are beeing executed one by one. When we execute some functions they go to the top of the stack, they get executed and go out of the stack one by one. But what if one of those function is waiting for some response from the internet? Basically all functions after that should just wait for the function that waits for the call to finish right? Well this will freeze our web page, and we don't want our page frozen on every call we make. That is why javascript delegates waiting tasks to the browser. 
 
-![javascript under the hood](https://github.com/Drakso/AJS2019/blob/master/Class6/img/javascriptandbrowser.png?raw=true)
+![javascript under the hood](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class6/img/javascriptandbrowser.png?raw=true)
 1. **JavaScript engine** 
 	1.1 **Memory Heap** - A region in memory used for storing values and other types of data in an ordered fashion
 	1.2 **Call Stack** - A structure where our functions are queued for running. It fills with tasks and it executes them in order LIFO ( Last In First Out )
@@ -41,7 +41,7 @@ Bye
 cb1
 
 #### behind the scenes
-![behind the scenes](https://github.com/Drakso/AJS2019/blob/master/Class6/img/eventloop.gif?raw=true)
+![behind the scenes](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class6/img/eventloop.gif?raw=true)
 
 ## Callback functions
 Callback functions are functions that are executed inside of other functions ( usually after the execution of the other, parent function ). Since javascript executes line by line and throws functions out of the stack when we have to wait for them, it is easy to see that sometimes we would need a system that actually executes the code in our defined order. This is where callbacks come to the picture. If we want to be sure that a function is executed after another, then we just pass that function as an argument to the first one. That way when the first one completes inside of it we call the second one. This way we keep the order of execution. 
@@ -56,7 +56,7 @@ let result = calculate((x, y) => x + y, 2, 5);
 console.log(result);
 ```
 #### event ( callback ) queue
-![event queue](https://github.com/Drakso/AJS2019/blob/master/Class6/img/callbackqueue.png?raw=true)
+![event queue](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class6/img/callbackqueue.png?raw=true)
 All callback functions from our code go to the corresponding browser API and then when it is done it goes to this queue. Then it waits its turn to get on the stack and get executed. This include callbacks from event handlers such as click events ( when clicking a button the callback we attached to the handler comes here in the callback queue ), waiting on calls from an AJAX request, waiting on a setTimeout etc. 
 
 ## Synchronous and asynchronous executing
