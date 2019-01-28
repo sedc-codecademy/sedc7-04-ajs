@@ -61,4 +61,16 @@ Coverage of the classes:
 * Coded a weather app
 
 #### [Class 6](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class6/README.md)
-* The event loop and callback functions
+* Discussed how javascript works
+* Where and how is javascript executed
+* What is asynchronous execution in other languages
+* Javascript and the browser relationship
+* What is asynchronous execution in javascript
+* What is the event loop, the stack and the event queue
+* Explained some browser APIs and how to use them
+* Talked about callback functions and the problems they solve
+* Explained some scenarios where callbacks can be helpfull
+* Talked about git and how to use it
+
+#### [Class 7](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class7/README.md)
+* Promises, Async/Await
