@@ -132,23 +132,23 @@ undefined
 The request succeeded!
 #### making an ajax call with a callback
 ```javascript
-function  makeCall(url){
+function  makeCall(url, callback){
 	$.ajax({
 		url:  url,
 		success:  function (response) {
 			console.log('The request succeeded!');
-			return  response;
+			callback(response)
 		},
 		error:  function(response){
 			console.log('The request failed!');
-			return  response.responseText;
+			callback(response.responseText);
 		}
 	});
 }
 function  print(results){
 	console.log(results);
 }
-print(makeCall("https://swapi.co/api/people/1/"));
+makeCall("https://swapi.co/api/people/1/", print);
 ```
 **Result:**
 The request succeeded!
