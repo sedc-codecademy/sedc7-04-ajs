@@ -169,4 +169,51 @@ fetch("https://raw.githubusercontent.com/sedc-codecademy/sedc7-04-ajs/master/g2/
 .then(data => showDocuments(data))
 .catch(error => console.log(error.message))
 .finally(()=> console.log("Everything is done at: " + new Date()));
-```	
+```
+## Async/await
+Looking now at promises we can safely say that callbacks are not that fun any more. We can do the same but quicker and more organised with promises. But in 2016 along with ES7 came another even nicer looking feature in javascript that help us solve the problem with waiting for data and executing code in particular order. This is the async/await feature and it works on top of the feature we discussed previously, promises. Basically, we create a **function** and we write **async** before it. This makes the function asynchronous, meaning that some code inside of it can wait until it is ready without blocking the whole execution stack. If we want to wait on some function ( that returns promise, because it works with promises ) we only write **await** before the function call that has a result promise. Then the function waits on that result and then continues with the code inside that function. The code outside of the function is executed as normal ( doesn't wait for the await inside the async function ).
+
+#### A simple fetch call with async/await
+```javascript
+async function getDataFromFetch(){
+    let response = await fetch("https://raw.githubusercontent.com/sedc-codecademy/sedc7-04-ajs/master/g2/Class7/documents.json");
+    let data = await response.json();
+    console.log(data);
+}
+getDataFromFetch();
+```
+
+#### An example of the first-second exercise with async/await
+```javascript
+async function runFunctions(){
+    console.log(await first(2000)); // 2
+    second(); // 4
+    console.log(`Everything is done at: ${new Date()}`); // 5
+}
+runFunctions(); // 1
+console.log("This does not wait for the async function to finish!"); // 3
+```
+
+#### An example of the documents example with async/await
+```javascript
+async function showImportantDocuments(){
+    let startTime = new Date().getTime(); // 2
+    let documents = await getDocuments(); // 3
+    checkDocuments(documents); // 5
+    let importantDocs = await getImportantDocuments(documents); // 6
+    showDocuments(importantDocs); // 7
+    console.log(`Done in: ${( new Date().getTime() - startTime) / 1000}s`); // 8
+}
+
+showImportantDocuments(); // 1
+console.log("This does not wait for the async function to finish!"); // 4
+```
+
+## Extra materials &#x1F4D9;
+[From callback hell to async/await](https://blog.hellojs.org/asynchronous-javascript-from-callback-hell-to-async-and-await-9b9ceb63c8e8)
+
+[Async/Await by example](https://codeburst.io/javascript-es-2017-learn-async-await-by-example-48acc58bad65)
+
+[Understanding Javascript Promises](https://flaviocopes.com/javascript-promises/)
+
+[Another good piece about promises](https://hackernoon.com/understanding-promises-in-javascript-13d99df067c1)
