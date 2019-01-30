@@ -2,7 +2,7 @@
 
 ## Basic Architecture 
 
-    ![alt text](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g3/Lecture07/img/img1.png)
+![alt text](../img/img1.png)
 
     •	Heap - Objects are allocated in a heap which is just a name to denote a large mostly unstructured region of memory
 
