@@ -34,7 +34,12 @@ const delay = (ms) => {
 }
 
 console.log('one')
-delay(1000).then(() => {
+let promise = delay(1000)
+const myFunc = () => console.log('hi')
+
+myFunc()
+
+promise.then(() => {
     console.log('two')
     return delay(1000)
 }).then(() => {

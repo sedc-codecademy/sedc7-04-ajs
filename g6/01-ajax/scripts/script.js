@@ -21,20 +21,21 @@ $(() => {
     console.log(planets)
     console.log('3) Table data loaded')
 })
-
+let config = {
+    url,
+    type: 'GET',
+    success: data => {
+        planets = data.results;
+        next = data.next;
+        previous = data.previous
+        console.log('2)', data)
+        showPlanets(planets)
+    },
+    error: err => { console.log(`something bad happened`, err) }
+}
 function getData(url) {
-    $.ajax({
-        url,
-        type: 'GET',
-        success: data => {
-            planets = data.results;
-            next = data.next;
-            previous = data.previous
-            console.log('2)', data)
-            showPlanets(planets)
-        },
-        error: err => { console.log(`something bad happened`, err) }
-    })
+    config.url = url
+    $.ajax(config)
 }
 
 function showPlanets(planets) {
