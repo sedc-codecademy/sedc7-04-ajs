@@ -5,12 +5,23 @@
 * When the call to the countires API for a country is made imidietly show the bordering countries in the console
 
 Example:
+
 Call -> MKD
+
 In console:
+
 Conutry:
+
 macedonia object
+
 Neighbours:
+
 albania object
+
 greece object
+
 bulgaria object
+
 serbia object
+
+[CountriesApi](https://restcountries.eu/);
