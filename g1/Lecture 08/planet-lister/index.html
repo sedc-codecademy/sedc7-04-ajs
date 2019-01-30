@@ -7,13 +7,21 @@
     <title>Document</title>
 </head>
 <body>
+
+    <img src="loading.gif" id="loader" style="display:none" />
     
-    <label for="planet-selector">Choose a planet:</label>
-    <select name="planet-selector" id="planet-selector"></select>
+    <div id="content">
+        <label for="planet-selector">Choose a planet:</label>
+        <select name="planet-selector" id="planet-selector"></select>
 
-    <ul id="people">
+        <a href="#" id="name-sort">Sort by name</a> |
+        <a href="#" id="length-sort">Sort by length</a> |
+        <a href="#" id="length-name-sort">Sort by length, then by name</a>
 
-    </ul>
+        <ul id="people">
+
+        </ul>
+    </div>
 
     <script src="script.js"></script>
 </body>
