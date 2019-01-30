@@ -22,13 +22,20 @@ document.addEventListener("DOMContentLoaded", () => {
         renderPlanetOptions(planets);
     });
 
+    document.getElementById("planet-selector").addEventListener("change", ({target}) => {
+        const planetId = target.value;
+        const planet = planets.find(planet => planet.id === planetId);
+        displayPeople(planet);
+    })
+
 
 });
 
 // configuration options that describe the api and its structure
 const config = {
     baseUrl: "https://swapi.co/api",
-    planets: "planets"
+    planets: "planets",
+    people: "people"
 }
 
 // with .then syntax - only first page
@@ -36,7 +43,7 @@ const config = {
 // function loadPlanetData() {
 //     const select = document.getElementById("planet-selector");
 
-//     fetch(`${config.baseUrl}/${config.planets}`)
+//     return fetch(`${config.baseUrl}/${config.planets}`)
 //         .then(response => response.json())
 //         .then(result => {
 
@@ -77,8 +84,10 @@ async function loadPlanetData() {
         
         // map the results into objects with id and name
         const pagePlanets = result.results.map(planet => ({
-            id: getIdFromPlanetUrl(planet.url),
-            name: planet.name
+            id: getIdFromItemUrl(planet.url),
+            name: planet.name,
+            residentIds: planet.residents.map(resident => getIdFromItemUrl(resident)),
+            isLoaded: false,
         }));
 
         // and then add them to the global planets array (using ...)
@@ -109,10 +118,10 @@ function renderPlanetOptions(planets) {
 }
 
 
-function getIdFromPlanetUrl(planetUrl) {
+function getIdFromItemUrl(itemUrl) {
     // // manipulate the string until it yields the ID
     // // remove the first 29 characters; 
-    // const tail = planetUrl.substr(29);
+    // const tail = itemUrl.substr(29);
     // // remove the last slash
     // return tail.substr(0, tail.lastIndexOf("/"));
 
@@ -120,6 +129,47 @@ function getIdFromPlanetUrl(planetUrl) {
     // **never write regex in code**
     // ** use https://regex101.com/ **
     const idRegex = /^.*\/(\d+)\/$/;
-    const match = planetUrl.match(idRegex);
+    const match = itemUrl.match(idRegex);
     return (match) ? match[1] : null;
+}
+
+async function displayPeople(planet) {
+    const people = await loadPeople(planet);
+    const peopleContainer = document.getElementById("people");
+    peopleContainer.innerHTML = "";
+    for (const person of people) {
+        const li = document.createElement("li");
+        li.textContent = person.name;
+        peopleContainer.appendChild(li);
+    }
+}
+
+async function loadPeople(planet) {
+    // if people are already loaded, just return them - cache
+    if (planet.isLoaded) {
+        return planet.residents;
+    }
+    // if the people are not loaded
+    // - load them
+    // - save them
+    // - return the saved values
+    planet.residents = [];
+    for (const id of planet.residentIds) {  
+        const person = await getPerson(id);
+        planet.residents.push(person);
+    }
+    planet.isLoaded = true;
+    return planet.residents;
+}
+
+async function getPerson(personId) {
+    const url = `${config.baseUrl}/${config.people}/${personId}`;
+
+    // return fetch(url)
+    //     .then(response => response.json());
+
+    const response = await fetch(url);
+    const person = await response.json();
+
+    return person;
 }
