@@ -1,7 +1,7 @@
 //Array , applied to JS arrays [].map();
 
 //MDN - mozilla developer network   https://developer.mozilla.org/
-//igor.joshevski@seavus.com
+
 
 //map
 

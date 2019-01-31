@@ -209,6 +209,18 @@ showImportantDocuments(); // 1
 console.log("This does not wait for the async function to finish!"); // 4
 ```
 
+### Bonus: Error handling in javascript
+When handling errors, in promises we used the catch function to catch any errors that might happen in the then method or if the promise changed it's state to rejected. But we can also handle errors outside of the promises. We do that with the try/catch block. The try/catch block is an error handling method used not only in javascript but in other languages as well. It works pretty simple. There are two blocks where we need to write code. The first is the **try** block. In it we write our code and logic. That code will be observed and when error strikes, it is delegated in the other block called **catch**. The catch block accepts an error parameter and in it, the error that we get is stored. We can then handle the error in any way we see fit.
+```javascript
+try{
+  showImportantDocuments();
+  console.log("This does not wait for the async function to finish!");
+}
+catch(error){
+  console.log(error);
+}
+```
+
 ## Extra materials &#x1F4D9;
 [From callback hell to async/await](https://blog.hellojs.org/asynchronous-javascript-from-callback-hell-to-async-and-await-9b9ceb63c8e8)
 
