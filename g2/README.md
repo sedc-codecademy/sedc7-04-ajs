@@ -73,4 +73,11 @@ Coverage of the classes:
 * Talked about git and how to use it
 
 #### [Class 7](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class7/README.md)
-* Promises, Async/Await
+* Discussing about the problem with callbacks
+* Introduction to promises
+* Promises and how they work
+* Promises handling
+* Introduction to async/await
+* Why and when to use async/await
+* Discussion about new Ecma Script features and transpilers
+* Error handling with try/catch

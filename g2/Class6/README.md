@@ -1,4 +1,3 @@
-
 # Javascript under the hood &#x1F34E;
 ## Where and how is my JS code running?
 Modern javascript runs most of the time in the browser. This means that it gets executed and lives in the browser, by the browser engine and compiler. This is really important because javascript was not aways compiled and refined like it is today. Today we don't just execute javascript, but our scripts actually work with the browser hand in hand to load modern web pages. Javascript works in one thread. This means that there is only one stack or queue for code or tasks to be executed and they are beeing executed one by one. When we execute some functions they go to the top of the stack, they get executed and go out of the stack one by one. But what if one of those function is waiting for some response from the internet? Basically all functions after that should just wait for the function that waits for the call to finish right? Well this will freeze our web page, and we don't want our page frozen on every call we make. That is why javascript delegates waiting tasks to the browser. 
@@ -35,9 +34,12 @@ console.log("Hi");
 setTimeout(cb1 , 1000);
 console.log("Bye");
 ```
-**Result: **
+**Result:**
+
 Hi
+
 Bye
+
 cb1
 
 #### behind the scenes
@@ -72,9 +74,12 @@ function second(){
 first();
 second();
 ``` 
-**Result: **
+**Result:**
+
 First thing
+
 Second thing
+
 #### two function calls but the first is delayed
 ```javascript
 function first(){
@@ -87,7 +92,9 @@ first();
 second();
 ```
 **Result:**
+
 Second thing
+
 First thing
 
 #### two function calls but the first is delayed ( solved with a callback )
@@ -104,7 +111,9 @@ function  second(){
 first(second);
 ```
 **Result:**
+
 First thing
+
 Second thing
 
 #### making an ajax call
@@ -128,8 +137,11 @@ function  print(results){
 print(makeCall("https://swapi.co/api/people/1/"));
 ```
 **Result:**
+
 undefined
+
 The request succeeded!
+
 #### making an ajax call with a callback
 ```javascript
 function  makeCall(url, callback){
@@ -151,7 +163,9 @@ function  print(results){
 makeCall("https://swapi.co/api/people/1/", print);
 ```
 **Result:**
+
 The request succeeded!
+
 {our response}
 
 ## Extra materials &#x1F4D9;
