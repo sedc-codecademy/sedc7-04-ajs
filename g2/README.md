@@ -81,3 +81,6 @@ Coverage of the classes:
 * Why and when to use async/await
 * Discussion about new Ecma Script features and transpilers
 * Error handling with try/catch
+
+#### [Class 8](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class8/README.md)
+* Objects
