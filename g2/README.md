@@ -83,4 +83,12 @@ Coverage of the classes:
 * Error handling with try/catch
 
 #### [Class 8](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class8/README.md)
-* Objects
+* Looked back at objects and what they are
+* Why do we need and use objects
+* Creating objects
+* Using and modifying objects
+* Constructor Notation and why it's important
+* What is 'this' in objects
+
+#### [Class 9](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class9/README.md)
+* Object methods
