@@ -144,6 +144,7 @@ document.getElementById("navigation").addEventListener("click", (e)=>{
       sortEventHandler();
     }
   })
+  
   let sortBy = {
     sortedBy:"",
     name: function(countries){
