@@ -5,7 +5,7 @@
 function someFunc() {
     let evens = [2,4,6]
     let odds = [1,3,5]
-    return [evens, odds, obj, {}]
+    return [evens, odds]
 }
 let arrOfEvensAndOdds = someFunc()
 let evens, odds
