@@ -1,0 +1,27 @@
+body {
+    background-image: url('./assets/starwars-background.jpg');
+    background-attachment: fixed;
+}
+
+#body, thead{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+#height{
+    cursor: pointer;
+}
+
+#navbar{
+    background-color: rgba(255, 255, 255, 0.6);
+    color: rgb(3, 160, 3)
+}
+
+.display-none {
+    display: none;
+}
+
+.logo {
+    width: 900px;
+    height: 420px;
+    margin: 0 auto;
+}
