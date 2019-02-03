@@ -133,5 +133,11 @@ const formatData = people => {
 }
 
 let findCharacter = (data, keyword) => {
-    
+    let result = data .filter(res => res.name.search(keyword) >= 0);
+    populateTable(result);
 }
+
+$('#search').on('click', () => {
+    let keyword = $('#inputVal').val();
+    findCharacter(people,keyword);
+})
