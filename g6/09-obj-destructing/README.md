@@ -3,10 +3,10 @@
 ## What is Destructuring?
 **Destructuring simply implies breaking down a complex structure into simpler parts**. In JavaScript, this complex structure is usually an **object** or an **array**. With the destructuring syntax, you can extract smaller fragments from arrays (items) and objects (properties). Destructuring syntax can be used for variable declaration or variable assignment. You can also handle nested structures by using nested destructuring syntax. So if we add a simple example for destructuring an object it will look something like this:
 ```javascript
-    let dog = {
-        dogName: "Bugsy",
-        dogColor: "Black",
-        dogAge: 4
+let dog = {
+    dogName: "Bugsy",
+    dogColor: "Black",
+    dogAge: 4
     }
 //If we want to console our dog's object proerties we can do this:
 console.log(dog.dogName); //Bugsy
@@ -25,7 +25,7 @@ So what is done in the previous example is that we declare an object and give to
 To explain the why of destructuring, it's better to look at a scenario. In the code below, we have a simple student object that has properties **name, age** and has a nested object of **scores** in three subjects(Maths, Elementary Science, English). Imagine we need to display some information based on this data and for that purpose we declare a displlaySymmary function that accepts one input parameter that should be a student object. 
 
 ```javascript
-    const student = {
+const student = {
     name: 'John Doe',
     age: 19,
     scores: {
@@ -57,7 +57,7 @@ Imagine the previous example but now, by using destructuring. Everythng is the s
 
 ```javascript
 //By using destructuring
-    function displaySummary({ name, scores: { JavaScript = 0, AdvancedJS = 0, CSharp = 0 } }) {
+function displaySummary({ name, scores: { JavaScript = 0, AdvancedJS = 0, CSharp = 0 } }) {
     console.log('Hello, ' + name);
     console.log('Your JavaScript score is ' + JavaScript);
     console.log('Your AdvancedJS score is ' + AdvancedJS);
