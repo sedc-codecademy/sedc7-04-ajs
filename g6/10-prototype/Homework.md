@@ -23,5 +23,5 @@ let person = {
 person.getKeysAndVals() // with the return result fill the variables acordingly
 // expected
 keys === ['name', 'middleName', 'lastName']
-values === ['Martina', 'Luther', 'Queen]
+values === ['Martina', 'Luther', 'Queen']
 ``` 
