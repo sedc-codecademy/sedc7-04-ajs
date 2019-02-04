@@ -40,8 +40,77 @@ console.log(me.sayHight())
 // function on our array [myArr.myMap(el => el)] we dont need the first 
 // parameter from our previous example
 // Keep in mind u need to use the [this] keyword
-let arr = [1,2,3]
-arr.myCustomMap()
+// let arr = [1,2,3]
+// arr.myCustomMap()
+
+// With destruct
+function Vehicle({ year, make }) {
+    this.year = year
+    this.make = make
+}
+// Without destruct
+// function Vehicle( year, make ) {
+//     this.year = year
+//     this.make = make
+// }
+Vehicle.prototype.startEngine = function() { return 'brrrrrm brrrrm' }
+Vehicle.prototype.year = '1960'
+
+// With destruct
+function Motorbike(obj) {
+    let { model, transmition } = obj
+    this.model = model
+    this.transmition = transmition
+    Vehicle.call(this, obj)
+}
+
+// Without destruct
+// function Motorbike(model, transmition, year, make) {
+//     this.model = model
+//     this.transmition = transmition
+//     Vehicle.call(this, year, make)
+// }
+
+let harley = {
+    model: 'Davidoson',
+    year: 1960,
+    make: 'Harley',
+    transmition: 'manual'
+}
+
+Motorbike.prototype = Object.create(Vehicle.prototype)
+
+// For constructor functions with destruct
+let myHarley = new Motorbike(harley)
+
+// For the functions without destruct
+// let myHarley = new Motorbike(harley)
+harley
+console.log(myHarley.startEngine())
+
+function LivingBeing() {}
+
+LivingBeing.prototype.canBeBorn = true
+LivingBeing.prototype.isAllowedToDie = true
+LivingBeing.prototype.canSpeak = 'Only in mysterious ways'
+
+function Human(name) { this.name = name }
+Human.prototype = Object.create(LivingBeing.prototype)
+Human.prototype.canSpeak = true
+Human.prototype.canEat = true
+let Adam = new Human('Adam')
+console.log(Adam.canBeBorn)
+console.log(Adam.canSpeak)
+console.log(Adam.isAllowedToDie)
+
+let God = new LivingBeing()
+console.log(God.canSpeak)
+console.log(God.canEat)
+
+
+// 
+// Object.create(someObj) will create an object for us and set [someObj] as a 
+// prototype to the created object
 
 
 
