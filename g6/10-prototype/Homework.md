@@ -8,7 +8,8 @@
 
 3. (bonus) Write a function that can be called on any array and return the sum of all the elements in that array that are numbers i.e. 
 ```JavaScript
-let arr = [1, '3', { num: 7 }, 8, 'FunFunFunction', 10, () => `I'm a number`, 33] arr.getSumOfNumbers(...) // output 52
+let arr = [1, '3', { num: 7 }, 8, 'FunFunFunction', 10, () => `I'm a number`, 33] 
+arr.getSumOfNumbers(...) // output 52
 ```
 
 4. (bonus) Write a function that can be called on any object and return its keys and its values in seperate arrays, fillout predefined variables __keys__ and __values__ with the correct array i.e.
