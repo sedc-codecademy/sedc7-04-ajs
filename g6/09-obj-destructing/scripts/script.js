@@ -77,3 +77,64 @@ console.log(Object.assign(obj, {c: 6}, {v: 8}))
 
 let { a } = {b: 4, d: 2, a: 9 }
 a
+
+let obj = {
+    name: 'Igor',
+    lastName: 'Mitkovski',
+    birthCity: {
+        cityName: 'Bitola',
+        population: 10000000,
+        villages: ['Kravari', 'Kremenica', 'Medzitlija', 'Dolno Dupeni']
+    }
+}
+
+
+// function info(name, city, population) {
+//     return `Hi I'm ${name} I'm born in ${city} which has ${population} citizens`
+// }
+// function info({ name, birthCity: { cityName, population }}) {
+//     return `Hi I'm ${name} I'm born in ${cityName} which has ${population} citizens`
+// }
+// let name
+// let cityName
+// let pop
+// let name, lastName, population
+// function info(obj) {
+//     let { name, birthCity: { cityName, population }} = obj
+//     return `Hi I'm ${name} I'm born in ${cityName} which has ${population} citizens`
+// }
+
+// let myInfo = info(obj)
+// myInfo
+
+function getEvenAndOdd(arr) {
+    let evens = [], odds = []
+    for (const num of arr) {
+        if(num % 2 === 0) {
+            evens.push(num)
+        } else {
+            odds.push(num)
+        }
+    }
+    let result = []
+    result.push(evens, odds)
+    return result
+}
+
+// let evens, odds
+// let result = getEvenAndOdd([1,2,3,4,5,6,7,8,9,0])
+
+// for (const arr of result) {
+//     if(arr[0] % 2 === 0) {
+//         evens = arr
+//     } else {
+//         odds = arr
+//     }
+// }
+// evens
+// odds
+
+let [evens, odds] = getEvenAndOdd([1,2,3,4,5,6,7,8,9,0])
+
+evens
+odds
