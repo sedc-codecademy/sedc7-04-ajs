@@ -4,6 +4,4 @@ const Assistant = function (firstName, lastName, availability = null) {
     this.availability = availability;
 }
 
-Assistant.prototype.getFullName = function() {
-    return `${this.firstName} ${this.lastName}`;
-}
+Assistant.prototype = new Person();

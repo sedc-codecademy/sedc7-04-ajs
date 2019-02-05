@@ -5,9 +5,7 @@ const Student = function (id, firstName, lastName, group = "") {
     this.group = group;
 }
 
-Student.prototype.getFullName = function() {
-    return `${this.firstName} ${this.lastName}`;
-}
+Student.prototype = new Person();
 
 Student.prototype.getStudentInfo = function() {
     return `#${this.id} ${this.getFullName()} (${this.group})`;
