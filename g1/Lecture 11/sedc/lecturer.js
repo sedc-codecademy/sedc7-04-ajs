@@ -10,3 +10,6 @@ Lecturer.prototype.knowsSubject = function(subject) {
     return this.knowledge.includes(subject.name);
 }
 
+Lecturer.prototype.getFullName = function () {
+    return `${this.firstName} ${this.lastName}`;
+}

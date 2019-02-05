@@ -4,5 +4,5 @@ const Person = function (firstName, lastName) {
 }
 
 Person.prototype.getFullName = function() {
-    return `${this.firstName} ${this.lastName}`;
+    return `${this.lastName}, ${this.firstName}`;
 }
