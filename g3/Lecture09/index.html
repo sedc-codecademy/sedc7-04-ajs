@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prototype and destruct</title>
+</head>
+<body>
+    <div>
+        <div>Enter Vehicle info</div>
+        <label for="model">Model: </label>
+        <input id="model" type="text"><br>
+        <label for="make">Make: </label>
+        <input id="make" type="text"><br>
+        <label for="year">Year: </label>
+        <input id="year" type="text"><br>
+        <label for="numOfDoors">Number Of Doors: </label>
+        <input id="numOfDoors" type="text"><br>
+        <label for="transmition">Transmition: </label>
+        <input id="transmition" type="text"><br>
+        <button id="getInfo">Create vehicle</button>
+    </div>
+    
+    <hr>
+    <div>
+        <table id="vehicles" border="1">
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Make</th>
+                    <th>Year</th>
+                    <th>Doors</th>
+                    <th>Transmition</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- <script src="./scripts/script.js"></script> -->
+    <script src="./scripts/prototype.js"></script>
+</body>
+</html>

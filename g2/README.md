@@ -81,3 +81,21 @@ Coverage of the classes:
 * Why and when to use async/await
 * Discussion about new Ecma Script features and transpilers
 * Error handling with try/catch
+
+#### [Class 8](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class8/README.md)
+* Looked back at objects and what they are
+* Why do we need and use objects
+* Creating objects
+* Using and modifying objects
+* Constructor Notation and why it's important
+* What is 'this' in objects
+
+#### [Class 9](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class9/README.md)
+* What are object methods
+* Object methods for creating and merging objects
+* Object methods for accessing entities inside of the object
+* Object methods for modifying access to objects
+* Dynamically adding object properties and methods
+
+#### [Class 10](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class10/README.md)
+* Prototypes

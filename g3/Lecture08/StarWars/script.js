@@ -1,66 +1,60 @@
-const db = {
-    people: {
-        url: 'https://swapi.co/api/people/',
-        data: (type => {
-            let arr = []
-            arr.type = type
-            return arr
-        })('people'),
-    },
-    planets: {
-        url: 'https://swapi.co/api/planets/',
-        data: (type => {
-            let arr = []
-            arr.type =type
-            return arr
-        })('planets'),
-    }
-}
-
+const peopleUrl = 'https://swapi.co/api/people/';
+const planetsUrl = 'https://swapi.co/api/planets/';
+const people = [];
+const planets = [];
 
 $(() => {
     $('#goHome').on('click', showLogo)
     $('#getPeople').on('click', () => {
         showPeople()
-        getData(db.people)
+        getCharatersData(peopleUrl)
     })
     $('#getPlanets').on('click', () => {
         showPlanets()
-        getData(db.planets)
+        getPlanetsData(planetsUrl)
     })
 })
-
-const getData = ({ url, data }) => {
-    data.length ? 
-    populateTable(data) :
-    fetchData({ url, data })  
+let getCharatersData = (url) => {
+    people.length ? 
+    populateTable(people) :
+    fetchData(url)    
+}
+const getPlanetsData = url => {
+    planets.length ? 
+    populatePlanetsTable(planets) :
+    fetchPlanets(url)    
 }
 
-const fetchData = ({ url, data }) => {
+const fetchData = url => {
     fetch(url).then(r => r.json())
     .then(r => { 
-        data.push(...r.results)
+        people.push(...r.results)
         return r
     })
     .then(r => {
         console.log(r)
         r.next ? 
-        fetchData({ url: r.next, data }) : 
-        populateTable(data)
+        fetchData(r.next) : 
+        populateTable(people)
     }).catch(e => console.log(e))
 }
-
-const populateTable = (data) => {
-    $('#spinner').html('')
-    $('#body').html('');
-    if(data.type === 'people') {
-        populatePeople(data)
-    } else if(data.type === 'planets') {
-        populatePlanets(data)
-    }
+const fetchPlanets = url => {
+    fetch(url).then(r => r.json())
+    .then(r => { 
+        planets.push(...r.results)
+        return r
+    })
+    .then(r => {
+        console.log(r)
+        r.next ? 
+        fetchPlanets(r.next) : 
+        populatePlanetsTable(planets)
+    })
 }
 
-let populatePeople = (people) => {
+let populateTable = (people) => {
+    $('#spinner').html('')
+    $('#body').html('');
     const formatedPeople = formatData(people)
     for (let person of formatedPeople) {
         $('#body').append(`
@@ -75,10 +69,9 @@ let populatePeople = (people) => {
     }
 }
 
-// Object.keys()
-// Object.values()
-
-let populatePlanets = (planets) => {
+let populatePlanetsTable = (planets) => {
+    $('#spinner').html('')
+    $('#body').html('');
     for (let planet of planets) {
         $('#body').append(`
                 <tr>
@@ -133,11 +126,5 @@ const formatData = people => {
 }
 
 let findCharacter = (data, keyword) => {
-    let result = data.filter(res => res.name.search(keyword) >= 0);
-    populateTable(result);
+    
 }
-
-$('#search').on('click', () => {
-    let keyword = $('#inputVal').val();
-    findCharacter(people,keyword);
-})
