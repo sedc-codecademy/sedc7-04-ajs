@@ -91,4 +91,11 @@ Coverage of the classes:
 * What is 'this' in objects
 
 #### [Class 9](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class9/README.md)
-* Object methods
+* What are object methods
+* Object methods for creating and merging objects
+* Object methods for accessing entities inside of the object
+* Object methods for modifying access to objects
+* Dynamically adding object properties and methods
+
+#### [Class 10](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class10/README.md)
+* Prototypes
