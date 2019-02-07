@@ -47,9 +47,8 @@
 // }
 // }
 
-class Human extends God {
+class Human{
    /**function Human */ constructor(name, lastName, birthYear) {
-       super()
         this.name = name
         this.lastName = lastName
         this.birthYear = birthYear
@@ -82,6 +81,5 @@ me.age = 3
 console.log(me.sayName())
 console.log(me.watchFootbal())
 console.log(Male.trimBeard(me))
-console.log(me.trimBeard())
 me.age = 18
 console.log(me.age)
