@@ -5,12 +5,29 @@
 * How to write synchronous and asynchronous code
 * An in depth knowledge on objects and object oriented JavaScript
 * How to use NPM and node.js console
+
 ## This Repository
 This repository will contain every piece of material about the subject. It will include:
 * Materials and documentation for the classes 
 * Code that we write on the classes
 * Exercises
-* Homeworks
+* Homework
+
+## Resources for being up to date with JavaScript
+#### Sites and newsletters
+[JavaScript Weekly Newsletter](https://javascriptweekly.com/)
+
+[dev.to JavaScript corner](https://dev.to/t/javascript)
+
+[Medium JavaScript topic](https://medium.com/topic/javascript)
+
+[Hackr.io JavaScript boards](https://hackr.io/tutorials/learn-javascript)
+
+#### Books
+[Secret of the JavaScript Ninja Second Edition](https://www.bookdepository.com/Secrets-of-the-JavaScript-Ninja--Second-Edition/9781617292859)
+
+[Eloquent JavaScript (free)](https://eloquentjavascript.net/)
+
 ## Contact
 Dragan Gelevski: gdragan6@gmail.com
 
@@ -18,6 +35,7 @@ Dejan Blazeski: dejan.pblazheski@seavus.com
 
 ## Course Classes
 Coverage of the classes:
+
 #### [Class 1](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class1/README.md)
 * Retrospective about the previous subject
 * Introduction to the AJS subject
@@ -55,21 +73,21 @@ Coverage of the classes:
 
 #### [Class 5](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class5/README.md)
 * Discussed the steps of building an application
-* Went through the analyzing of our application and the requierments
+* Went through the analyzing of our application and the requirements
 * Talked about API keys and how to obtain them and use them
 * Did some planning for the application
 * Coded a weather app
 
 #### [Class 6](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class6/README.md)
-* Discussed how javascript works
-* Where and how is javascript executed
+* Discussed how JavaScript works
+* Where and how is JavaScript executed
 * What is asynchronous execution in other languages
-* Javascript and the browser relationship
-* What is asynchronous execution in javascript
+* JavaScript and the browser relationship
+* What is asynchronous execution in JavaScript
 * What is the event loop, the stack and the event queue
 * Explained some browser APIs and how to use them
 * Talked about callback functions and the problems they solve
-* Explained some scenarios where callbacks can be helpfull
+* Explained some scenarios where callbacks can be helpful
 * Talked about git and how to use it
 
 #### [Class 7](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class7/README.md)
@@ -98,4 +116,14 @@ Coverage of the classes:
 * Dynamically adding object properties and methods
 
 #### [Class 10](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class10/README.md)
-* Prototypes
+* Discussion about organising JavaScript code ( patterns and architecture )
+* A short introduction to object-oriented programming
+* What is inheritance? 
+* Class vs prototype inheritance
+* Object oriented programming in JavaScript
+* Inheritance with prototypes
+* The prototype chain
+* Constructors and Object methods for manipulating prototypes
+
+#### [Class 11](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class11/README.md)
+* Classes in JavaScript
