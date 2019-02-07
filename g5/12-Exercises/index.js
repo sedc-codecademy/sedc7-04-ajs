@@ -12,7 +12,7 @@
 			- read a page
 			- get current page
 			
-	2. We have two book tyoes eBook and Paper which are extending
+	2. We have two book types eBook and Paper which are extending
 	Book class.
 		each of these have properties:
 			- can burn
@@ -264,3 +264,13 @@ function printOnScreen(){
 }
 
 printOnScreen();
+
+/*
+	4. Add a HTML Form on screen from which user can add new Book to the list by creating new instances of eBook or PaperBook
+	
+	5. Allow user to remove book from the list (remove from library array) , by clicking on delete button on screen
+	
+	6. Style the whole app using CSS to look nicer.
+	
+	7. Display which page of the book is currently read (currentPage property) near each book.
+*/
