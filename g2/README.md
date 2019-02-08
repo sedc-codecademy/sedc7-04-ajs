@@ -28,6 +28,8 @@ This repository will contain every piece of material about the subject. It will 
 
 [Eloquent JavaScript (free)](https://eloquentjavascript.net/)
 
+[You don't know JS Books (free)](https://github.com/getify/You-Dont-Know-JS)
+
 ## Contact
 Dragan Gelevski: gdragan6@gmail.com
 
