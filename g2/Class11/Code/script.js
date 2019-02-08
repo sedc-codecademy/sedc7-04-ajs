@@ -17,7 +17,6 @@ let boat = new Vehicle(33, "Boat", "2z3", 50000);
 
 class WheeledVehicle extends Vehicle {
     constructor(id, name, batch, price, wheels) {
-        console.log("The object is constructing!");
 	    super(id, name, batch, price);
         this.wheels = wheels;
     }
@@ -85,7 +84,7 @@ class ElectricCar extends Car {
     }
     get owner() {
 		console.log("We are getting the name of the owner. Please wait...");
-        return this._owner;
+        return "The car is owned by:" + this._owner;
     }
 	set owner(ownerName){
 		console.log("We are setting the name of the owner. Please wait...")
@@ -94,8 +93,27 @@ class ElectricCar extends Car {
 }
 
 let myElectricCar = new ElectricCar(12, "Tesla", "23n", 30000, 5, "Dejan");
-console.log(myElectricCar);
-console.log(myElectricCar.owner);
-console.log(myElectricCar)
+// myElectricCar.owner = "Trajan";
+// // 1. set function is called
+// // 2. set function sets the value if the letters in the name are more than 1
+// console.log(myElectricCar.owner);
+// console.log(myElectricCar);
+// myElectricCar.owner = "b";
+// 1. get function is called
+// 2. get function returns our value
+
+// console.log(myElectricCar);
+// console.log(myElectricCar.owner);
+// console.log(myElectricCar)
 // myElectricCar.owner = "B";
 // let myOtherElectricCar = new ElectricCar(13, "Electra", "51q", 25000, 3, "I");
+class Random{
+    constructor(stuff){
+        this.stuff= stuff;
+    }
+}
+let someVehicle = new Vehicle(2, "trotinet", "44s", 50);
+// console.log(myElectricCar instanceof ElectricCar);
+// console.log(myElectricCar instanceof Car);
+// console.log(myElectricCar instanceof Vehicle);
+console.log(someVehicle instanceof Vehicle);
