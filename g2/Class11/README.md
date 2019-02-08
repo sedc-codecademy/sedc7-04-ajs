@@ -30,7 +30,7 @@ class WheeledVehicle extends Vehicle {
 		console.log(`We are driving a ${this.name} on ${this.wheels} wheels!`);
     }
 }
-let bike = new WheeledVehicle(87, "Bike", "12g", 700);
+let bike = new WheeledVehicle(87, "Bike", "12g", 700, 2);
 console.log(bike);
 bike.printVehicle();
 bike.driveVehicle();
@@ -51,7 +51,7 @@ class Car extends WheeledVehicle {
 		console.log(`You need ${this.price - money} more to buy this car!`);
     }
 }
-let car = new Car(99, "Car", "22k", 7800, 4);
+let car = new Car(99, "Car", "22k", 7800, 4, true);
 console.log(car);
 car.printVehicle();
 car.driveVehicle();
@@ -82,6 +82,7 @@ class Car extends WheeledVehicle {
 		}
 	}
 }
+
 ```
 ## Get / Set
 Getters and Setters are not a new concept in programming. When we create properties on objects there are two things that can happen after we create the object: try and get a value from a property or try to set a value to a property. There are functions that handle the getting and setting of these properties behind the scenes and we can use them in classes if we need to change the way we get or set a property. This is useful when we want to validate something on setting or log something on setting or getting. We can also structure the data that comes from our getter or setter.
@@ -91,20 +92,20 @@ class ElectricCar extends Car {
         super(id, name, batch, price, doors, true);
 		this.owner = owner;
     }
-    get Owner() {
+    get owner() {
 		console.log("We are getting the name of the owner. Please wait...");
         return this._owner;
     }
-	set Owner(ownerName){
+	set owner(ownerName){
 		console.log("We are setting the name of the owner. Please wait...")
-		ownerName > 1 ? _owner = ownerName : (()=> throw new Error("Owner name too short!"))();
+		ownerName > 1 ? this._owner = ownerName : ({()=> throw new Error("Owner name too short!")})();
 	}
 }
 
-let myElectricCar(12, "Tesla", "23n", 30000, 5, "Dejan");
+let myElectricCar = new ElectricCar(12, "Tesla", "23n", 30000, 5, "Dejan");
 console.log(myElectricCar);
 console.log(myElectricCar.owner);
-let myOtherElectricCar(13, "Electra", "51q", 25000, 3, "I");
+let myOtherElectricCar = new ElectricCar(13, "Electra", "51q", 25000, 3, "I");
 ```
 
 #### Check if an object is an instance of a class
