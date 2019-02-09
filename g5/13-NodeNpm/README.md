@@ -111,16 +111,27 @@ Installation is very quick. We just open the console and write: **npm install np
  
  #### Commands
  npm init - create a package.json for your project
+ 
  npm ls - lists installed packages
+ 
  npm install - Looks in the folder for dependencies configuration and if it finds any, downloads and installs all packages and dependencies
+ 
  npm install PackageName - installs pakage locally in the folder you are in and is a release package
+ 
  npm install PackageName -g -installs package globally to your file system
+ 
  npm install PackageName --save-dev - installs a package only needed for the development phase
+ 
  npm install PackageName --no-save - Installs package only for this folder and this machine only ( Will not be stored in dependencies )
+ 
  npm install PackageName@1.8.2 - install package with a certain version
+ 
  npm install --only=prod - installs packages only for production
+ 
  npm outdated - checks for outdated packages
+ 
  npm update PackageName - updates package
+ 
  npm uninstall PackageName - removes package from the project
  
 #### Configuration
@@ -136,3 +147,7 @@ We can see all our dependencies in the package.json file. The package.json file 
 [Introduction to Node.js](https://codeburst.io/the-only-nodejs-introduction-youll-ever-need-d969a47ef219)
 
 [Read/Write in node.js](https://blog.risingstack.com/mastering-the-nodejs-core-modules-file-system-fs-module/)
+
+[Introduction to bootstrap](https://www.taniarascia.com/what-is-bootstrap-and-how-do-i-use-it/)
+
+[Video about bootstrap grid](https://www.youtube.com/watch?v=qmPmwdshCMw)
