@@ -19,3 +19,11 @@ console.log(dumbo.isEaten);
 const babe = new Animal("Babe", "pig", 2, 15);
 vk.eat(babe);
 console.log(babe.isEaten);
+
+// ------------
+
+bundo.eat("lettuce");
+
+// -------------
+
+vk.eat("lettuce");

@@ -21,15 +21,15 @@
 
 ## Testing
 
-Feed the oldest bunny to the youngest wolf
-Feed an elephant to a wolf
-Feed some lettuce to a bunny
-Feed an elephant to bunny
-Feed the smallest pig to the largest wolf
-Feed the largest pig to the smallest wolf
-Feed a wolf to a pig
-Feed a pig to a pig
-Feed a pig to an elephant
-Feed some lettuce to a pig
-Feed some lettuce to a wolf
+- Feed the oldest bunny to the youngest wolf
+- Feed an elephant to a wolf
+- Feed some lettuce to a bunny
+- Feed an elephant to bunny
+- Feed the smallest pig to the largest wolf
+- Feed the largest pig to the smallest wolf
+- Feed a wolf to a pig
+- Feed a pig to a pig
+- Feed a pig to an elephant
+- Feed some lettuce to a pig
+- Feed some lettuce to a wolf
 
