@@ -1,0 +1,14 @@
+{
+  "name": "exercise-1",
+  "version": "1.0.0",
+  "description": "1. Initialize your package using `npm init`\r 2. Install the `to-title-case` package using `npm install to-title-case`\r 3. Import the package using `require`\r 4. Transform the `bookTitles` array\r 5. Output the transformed array",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "to-title-case": "^1.0.0"
+  }
+}
