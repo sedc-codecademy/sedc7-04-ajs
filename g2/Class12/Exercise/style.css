@@ -1,0 +1,15 @@
+#recipesList{
+    padding: 5vh;
+}
+
+.nav {
+    padding: 5vh;
+}
+
+.nav li{
+    cursor: pointer;
+}
+
+h1{
+    text-align:center;
+}
