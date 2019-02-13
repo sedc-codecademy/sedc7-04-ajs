@@ -46,4 +46,33 @@ class Ingredient {
     }
 }
 ```
-
+## Recipe Class
+```javascript
+class Recipe {
+    constructor(name, description, ingredients, timeToCook, imgLink){
+        this.name = name;
+        this.description = description;
+        this.ingredients = ingredients;
+        this.timeToCook = timeToCook;
+        this.img = imgLink
+        this.isVegetarian = this.ingredients
+        .map(ingredient => ingredient.isVegetarian)
+        .reduce((result, current) => result = result && current, true);
+        this.isVegan = this.ingredients
+        .map(ingredient => ingredient.isVegan)
+        .reduce((result, current) => result = result && current, true);
+    }
+    fullCaloriesValue(){
+        return this.ingredients
+        .map(ingredient => ingredient.fullCaloriesValue())
+        .reduce((result, current) => result += current, 0);
+    }
+    printIngridients(){
+        return this.ingredients
+        .reduce((resultString, current) => resultString += `${current.amount} x ${current.name}(${current.calories}k)  `, "");
+    }
+    static printRecipe(recipe){
+        return `...HTML`
+    }
+}
+```
