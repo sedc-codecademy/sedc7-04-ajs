@@ -128,4 +128,12 @@ Coverage of the classes:
 * Constructors and Object methods for manipulating prototypes
 
 #### [Class 11](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class11/README.md)
-* Classes in JavaScript
+* Discussion about working as developers
+* Introduction to classes in JavaScript
+* Constructors and how to use them
+* Inheritance with classes
+* Working with classes and comparing them with prototypes
+* How to check an object instance
+
+#### [Class 12](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class12/README.md)
+* Exercise and working with objects and classes

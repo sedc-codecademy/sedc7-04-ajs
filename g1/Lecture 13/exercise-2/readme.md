@@ -34,3 +34,7 @@ Mining starships have
 # Task 1
 
 - Create ten starships of each type
+
+# Task 2
+- Create two arrays of five fighters (with random powers in some range)
+- Have a fight until one of the teams is dead.
