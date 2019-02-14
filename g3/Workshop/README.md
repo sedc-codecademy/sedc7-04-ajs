@@ -36,7 +36,7 @@ A planet is an entity that floats in to space. It is shown on the web page so th
 * distance - Planet distance
 * shipsDocked - Ships currently docked on the planet ( not settable, empty array by default )
 * development - The development level of the planet ( 1 - 3 )
-* getMarketPrice - method that accepts a price as an attribute of a service and returns the planet market value of that price by this formula : price = planet development * price / Math.Round( planet population / planet size )
+* getMarketPrice - method that accepts a price as an attribute of a service and returns the planet market value of that price by this formula : price = planet development * price - Math.floor( planet population / planet size )
 * repair - accepts a ship as an attribute and repairs it's hulls to max
 	* if the attribute is not a ship, you can't repair it
 	* if the ship is not docked on this planet, you can't repair it
