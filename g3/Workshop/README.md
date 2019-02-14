@@ -20,7 +20,7 @@ A ship is chosen at the start of the game. That ship will be the vehicle that we
 	* Can't go to a planet that a ship is docked on
 	* Can't start if the ship is damaged, destroyed, has no crew or has no fuel to reach the planet
 	* isWorking is changed to true
-	* **Fuel is is calculated** by this formula: fuel = planet distance  *  20;
+	* **Fuel is is calculated** by this formula: fuel = fuel - (planet distance  *  20);
 	* The ship should get to the planet and **dock** in different time span depending on the speed and distance to the planet
 	* **Time to get to a planet is calculated** by this formula: planet distance  *  1000ms  /  speed of ship
 * dock - method that accepts a planet parameter and is called when a ship needs to dock on a planet
