@@ -1,0 +1,16 @@
+{
+  "name": "13-nodejs",
+  "version": "1.0.0",
+  "description": "My first nodejs project",
+  "main": "app.js",
+  "dependencies": {
+    "nodemon": "^1.18.10",
+    "title-case": "2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Igor Igeto Mitkovski",
+  "license": "ISC"
+}
