@@ -17,7 +17,7 @@ A ship is chosen at the start of the game. That ship will be the vehicle that we
 * dockedPlanet - the planet on which the ship is docked at ( not settable, null by default )
 * start - Method that accepts **a planet** as parameter and will start an exploration to that planet
 	* Can't go to something that is not a planet
-	* Can't go to a planet that a ship is docked on
+	* Can't go to a planet that the ship is already docked on
 	* Can't start if the ship is damaged, destroyed, has no crew or has no fuel to reach the planet
 	* isWorking is changed to true
 	* **Fuel is is calculated** by this formula: fuel = fuel - (planet distance  *  20);
