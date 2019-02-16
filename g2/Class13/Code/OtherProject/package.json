@@ -1,0 +1,21 @@
+{
+  "name": "newproject",
+  "version": "1.0.0",
+  "description": "We are learning npm in SEDC",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "project"
+  ],
+  "author": "Bobi",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "underscore": "^1.9.1"
+  }
+}

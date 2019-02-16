@@ -137,3 +137,9 @@ Coverage of the classes:
 
 #### [Class 12](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class12/README.md)
 * Exercise and working with objects and classes
+
+#### [Class 13](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class13/README.md)
+* Node.js and NPM
+
+#### [Workshop](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/workshop/README.md)
+* Workshop
