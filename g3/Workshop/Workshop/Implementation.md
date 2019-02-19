@@ -60,3 +60,85 @@ class Ship{
     }
 }
 ```
+
+## Planet
+```javascript
+class Planet{
+    constructor(name, size, population, distance, development){
+        this.name = name;
+        this.size = size;
+        this.population = population;
+        this.distance = distance;
+        this.shipsDocked = [];
+        this.development = development;
+    }
+    getMarketPrice(price){
+        return this.development * price - Math.floor(this.population / this.size);
+    }
+    repair(ship){
+        if(!ship instanceof Ship){
+            console.log(`${ship} is not a ship.`);
+            return;
+        }
+        if(this.shipsDocked.length === 0){
+            console.log(`You are not docked on this planet!`);
+            return;
+        }
+        if(ship.hull === ship.hullMax){
+            console.log(`Your ship is in great shape already!`);
+            return;
+        }
+        let price = this.getMarketPrice(game.price.repair);
+        if(ship.credits >= price){
+            ship.credits -= price;
+            ship.hull = ship.hullMax;
+            ship.isDamaged = false;
+            console.log("Hulls repaired!");
+        } else {
+            console.log(`You need ${price - ship.credits} more credits.`);
+        }
+    }
+    refuel(ship){
+        if(!ship instanceof Ship){
+            console.log(`${ship} is not a ship.`);
+            return;
+        }
+        if(this.shipsDocked.length === 0){
+            console.log(`You are not docked on this planet!`);
+            return;
+        }
+        if(ship.fuel === ship.fuelMax){
+            console.log(`Your fueltank is already full!`);
+            return;
+        }
+        if(this.ship )
+        console.log(game.price.fuel);
+        let price = this.getMarketPrice(game.price.fuel);
+        if(ship.credits >= price){
+            ship.credits -= price;
+            ship.fuel = ship.fuelMax;
+            console.log("Ship refuled!");
+        } else {
+            console.log(`You need ${price - ship.credits} more credits.`);
+        }
+    }
+    hireCrewMember(ship){
+        if(!ship instanceof Ship){
+            console.log(`${ship} is not a ship.`);
+            return;
+        }
+        if(this.shipsDocked.length === 0){
+            console.log(`You are not docked on this planet!`);
+            return;
+        }
+        let price = this.getMarketPrice(game.price.crew);
+        if(ship.credits >= price){
+            ship.credits -= price;
+            ship.crew += 1;
+            console.log("A new crew member boarded the ship!");
+        } else {
+            console.log(`You need ${price - ship.credits} more credits.`);
+        }
+    }
+}
+```
