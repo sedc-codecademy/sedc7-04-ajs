@@ -159,8 +159,13 @@ let intervalAsteroids = setInterval(() => {
 
     });
     
-    bullets.forEach(bullet => {
-        bullet.moveBullet()
+    bullets.forEach((bullet, index) => {
+        bullet.moveBullet();
+        
+        if(bullet.y <= 0)
+        {
+        	bullets.splice(index, 1);
+        }
     });
 
     i++;
