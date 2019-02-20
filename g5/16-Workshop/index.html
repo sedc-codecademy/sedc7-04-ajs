@@ -1,0 +1,53 @@
+<html>
+	<head>
+		
+		<style>
+			.page
+			{
+				display: block;
+				width: 100%;
+				text-align: center;
+			}
+			
+			.page-item
+			{
+				display:inline-block;
+				vertical-align: center;
+				padding: 5px;
+				border: 1px solid black;
+				margin-right: 4px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Bendojte</h1>
+		
+		<div class="search">
+			<input type="text" id="search-input" placeholder="Search band by name"/>
+			<button onclick="searchBand()">Searchs</button>
+		</div>
+		
+		<div class="dropdown">
+			<select class="tags-filter">
+				<option value="">None</option>
+			</select>
+		</div>
+		
+		<table class="bands">
+			<thead>
+				<tr>
+					<td>#ID</td>
+					<td onclick="sortByName()">Name</td>
+					<td>Active</td>
+					<td>Tags</td>
+					<td>Members</td>
+					<td onclick="sortByAlbums()">Total albums</td>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+		
+		<div class="page"></div>
+		<script src="script.js"></script>
+	</body>
+</html>
