@@ -55,6 +55,15 @@ A planet is an entity that floats in to space. It is shown on the web page so th
 	* if the ship is not docked on this planet, you can't add a crew member
 	* if the ship has not enough credits you can't add a crew member
 	* When the ship hires a new crew member it's crew is expanded by 1 and the price is subtracted from the ship credits
+### SpaceEvent ☄
+Space Event is something that happens while the ship is flying in space. Events usually have some modifier to the ship in a positive or negative way. Number of events are decided by the ships time to reach its destination. An event happens every 4 seconds while the ship is traveling.
+* name - Name of the event
+* description - Description what has happened to the ship
+* crewModifier - Crew modification from the event ( ex: 0 if the crew is affected, -1 if a crew is lost and 1 if a crew member is added )
+* fuelModifier - Fuel modification from the event ( same example as crew )
+* hullmodifier - hull modification from the event ( same example as crew )
+* startEvent - Accepts an argument of a ship object. Checks if the object is a ship. If it is after 4 seconds it changes the ship stats if there are any modifiers and prints a message in the console with the name of the event, the description and what changed on the ship. **Help: Think what this should return if we want to queue them one by one.**
+* generateEvents - **static** method that accepts time and array of events and chooses random events from the array depending on the time. The method starts from 1 event. If the time is longer than 8 seconds it chooses 2 events, if it's more than 18 seconds 3 events and if its larger than 26 seconds 4 events. The events are chosen at random and there can be multiple events of the same kind. This method returns an array of the chosen events.
 
 ### Resources 🎁
 #### Prices
@@ -82,4 +91,21 @@ planets: [
     new Planet("Dextriaey", 50000, 500000, 9, 3, "img/Dextriaey.png"),
     new Planet("B18-1", 250000, 4000000, 12, 2, "img/B18-1.png")
 ],
+```
+#### Events
+```javascript
+let events = [
+        new SpaceEvent("Fuel Leak", "Due to low maintenance of the ship, the fuel tank leaked. The leak was patched, but we lost some fuel.", 0, -50, 0 ),
+        new SpaceEvent("Pirates!", "Space pirates attacked the ship! We escaped, but our hull took some damage!", 0, -20, -150 ),
+        new SpaceEvent("Unknown substance", "An unknown substance was found on the cargo ship. A crew member touched it and died on the spot.", -1, 0, 0 ),
+        new SpaceEvent("Asteroid field", "We entered an asteroid field. It was hard, but our captain managed to go out of it.", 0, -30, -100 ),
+        new SpaceEvent("Fire on deck", "The main system overheated and fire broke from one of the panels. The crew quickly extinguished it.", 0, 0, -70 ),
+        new SpaceEvent("Bad stop", "You stop at a nearby station for a pit-stop. They give you repair supplies.", 0, -50, +50 ),
+        new SpaceEvent("Captains Birthday", "It's the captain's birthday. Everybody got drunk. Nobody remembers what happened the last 12 hours.", -1, -60, -100 ),
+        new SpaceEvent("Space Shark", "Your ship is attacked by a space shark. After killing it, you watch a tutorial on how to turn shark blood in to fuel.", 0, +80, -120 ),
+        new SpaceEvent("Alien in need", "An alien is stranded on it's broken ship. It took some time and effort but you save him and board him on your ship.", 1, -50, -50 ),
+        new SpaceEvent("Hail the federation", "A federation cruiser hails you. They help you with supplies and fuel.", 0, +100, +100 ),
+        new SpaceEvent("Destroyed Transport Ship", "You encounter a destroyed transport ship. It's dangerous, but you try salvaging its fuel tank.", 0, +150, -80 ),
+        new SpaceEvent("Angry Spider", "An angry spider appears on the deck. The captain stomps on it. Everything is fine", 0, 0, 0 )
+    ];
 ```
