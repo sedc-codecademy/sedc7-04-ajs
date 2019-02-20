@@ -1,0 +1,11 @@
+
+body {
+    background: url('../images/vs.png');
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    background-position: fixed;
+}
+
+.arena {
+    height: 500px;
+}
