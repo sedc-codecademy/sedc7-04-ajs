@@ -1,0 +1,24 @@
+.row{
+    margin: 5vh;
+}
+body{
+    background-image: url("img/background.jpg");
+}
+.card{
+    background-image: url("img/card.jpg");
+}
+.card-link{
+    color: white;
+}
+.list-group-item{
+    cursor: pointer;
+}
+
+#gameMap{
+    display: none;
+}
+
+h1{
+    color:white;
+    text-align: center;
+}
