@@ -136,10 +136,29 @@ Coverage of the classes:
 * How to check an object instance
 
 #### [Class 12](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class12/README.md)
-* Exercise and working with objects and classes
+* Implementing a recipe application with classes and objects
+* Reading and discussing the requierments
+* Discussion on how to build the application
+* Testing the application
 
 #### [Class 13](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/Class13/README.md)
-* Node.js and NPM
+* Introduction and installation of Node.js
+* Working with the windows and VS Code console
+* Writing javascript in the console
+* Discussion about back-end with node.js and why we need it
+* Importing scripts with node.js
+* Working with the file system in Node.js
+* What are Package Managers
+* Introduction to NPM
+* Installing and managing packages
+* Versions and packages restrictions
 
 #### [Workshop](https://github.com/sedc-codecademy/sedc7-04-ajs/blob/master/g2/workshop/README.md)
-* Workshop
+* Building a game with starshops
+* Discussing the requierments
+* Talking and discussing where we should start
+* Deconstructing the process of building a solution to a larger problem
+* Adding extra features to the game
+* Building the UI
+* Testing the game
+* Tutorial on how to host a project on GitHub Pages
