@@ -9,7 +9,7 @@
   "author": "SEDC",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.0",
     "bootstrap": "4.2.1"
   }
 }
