@@ -1,5 +1,5 @@
 # Lets build a WEATHERALERT ⛅
-## Phases of building an app 
+## Phases of building an app 🏗
 Applications are not built only by coding and drinking coffee. Applications are also built by thinking, researching, planning and testing. All these things are called a development cycle of an application.  Today we are going to build an application. These are the phases that we are going to pass:
 * Analyzing and researching
 * Planning and discussion
